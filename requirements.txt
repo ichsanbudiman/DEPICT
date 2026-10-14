@@ -1,0 +1,4 @@
+# Runtime deps for gt100 extract + emit (BlueBEAR venv).
+PyYAML>=6
+tree-sitter>=0.21
+tree-sitter-java>=0.21
