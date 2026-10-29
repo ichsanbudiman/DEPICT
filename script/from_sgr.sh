@@ -4,7 +4,7 @@ SGR="${1:-}"
 OUT="${2:-}"
 FOLDER="${3:-}"
 HOPS="${4:-1}"
-NEIGH="${5:-v1}"
+NEIGH="${5:-v2}"
 export PYTHONPATH="${ROOT}/graph_dataset_extractor${PYTHONPATH:+:$PYTHONPATH}"
 ARGS=(--hops "$HOPS" --neighbourhood "$NEIGH")
 if [[ -n "$SGR" ]]; then

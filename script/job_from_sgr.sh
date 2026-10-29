@@ -25,14 +25,18 @@ cd "$PROJECT_DIR" || {
 echo "=========================================="
 echo "GRAPH DATASET EXTRACTOR"
 echo "=========================================="
-echo "Job ID:   ${SLURM_JOB_ID:-local}"
-echo "Node:     ${SLURM_NODELIST:-local}"
-echo "Date:     $(date)"
-echo "Repo:     $(pwd)"
-echo "Python:   $(command -v python3)  $(python3 --version 2>&1)"
+HOPS=1
+NEIGH=v2
+echo "Job ID:        ${SLURM_JOB_ID:-local}"
+echo "Node:          ${SLURM_NODELIST:-local}"
+echo "Date:          $(date)"
+echo "Repo:          $(pwd)"
+echo "Python:        $(command -v python3)  $(python3 --version 2>&1)"
+echo "Neighbourhood: ${NEIGH}"
+echo "Hops:          ${HOPS}"
 echo "=========================================="
 
-bash script/from_sgr.sh
+bash script/from_sgr.sh "" "" "" "$HOPS" "$NEIGH"
 EXIT_CODE=$?
 
 echo ""
