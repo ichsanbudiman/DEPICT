@@ -1,3 +1,5 @@
+import re
+
 JAVA_PRIMITIVES = frozenset({
     "byte", "short", "int", "long", "float", "double", "boolean", "char", "void",
 })
@@ -6,6 +8,32 @@ KEYWORD_MODIFIERS = frozenset({
     "public", "protected", "private", "abstract", "static", "final", "strictfp",
     "native", "synchronized", "transient", "volatile", "default", "sealed", "non-sealed",
 })
+
+
+_ANNOTATION_ONLY = re.compile(r"@[\w.]+(?:\s*\([^)]*\))?\s*")
+
+
+def annotation_only_line(line: str) -> bool:
+    """True when a line is only annotations, so member source starts on the next line."""
+    stripped = line.strip()
+    if not stripped.startswith("@"):
+        return False
+    return _ANNOTATION_ONLY.sub("", stripped) == ""
+
+
+def format_signature(name: str | None, parameters: list | None) -> str:
+    """``name(Type arg, ...)`` as stored on method and constructor nodes."""
+    parts: list[str] = []
+    for param in parameters or []:
+        if not isinstance(param, dict):
+            continue
+        dtype = (param.get("datatype") or "").strip()
+        pname = (param.get("name") or "").strip()
+        if dtype and pname:
+            parts.append(f"{dtype} {pname}")
+        elif dtype or pname:
+            parts.append(dtype or pname)
+    return f"{name or ''}({', '.join(parts)})"
 
 
 class id_allocator:
@@ -59,6 +87,52 @@ class base_extractor:
             "line_start": node.start_point[0] + 1,
             "line_end": node.end_point[0] + 1,
         }
+
+    def member_span(self, node) -> dict:
+        """Declaration lines, skipping a leading annotation-only line such as ``@Override``."""
+        span = self.span(node)
+        start, end = span.get("line_start"), span.get("line_end")
+        if not isinstance(start, int) or not isinstance(end, int):
+            return span
+        lines = self.source_text().splitlines()
+        i = start
+        while i <= end and i <= len(lines) and annotation_only_line(lines[i - 1]):
+            i += 1
+        if i > end:
+            return span
+        return {"line_start": i, "line_end": end}
+
+    def source_text(self) -> str:
+        """Decoded compilation-unit text with normalized newlines."""
+        cached = getattr(self, "_source_text", None)
+        if cached is None:
+            cached = (
+                self.source_bytes.decode("utf-8", errors="replace")
+                .replace("\r\n", "\n")
+                .replace("\r", "\n")
+            )
+            self._source_text = cached
+        return cached
+
+    def line_text(self, span: dict | None) -> str | None:
+        """Full source lines covered by ``span``, including leading whitespace.
+
+        Line slices match annotation member ``source``: no trailing newline,
+        and a javadoc on the previous line stays outside the slice.
+        """
+        if not span:
+            return None
+        start = span.get("line_start")
+        end = span.get("line_end")
+        if not isinstance(start, int) or not isinstance(end, int):
+            return None
+        if start < 1 or end < start:
+            return None
+        lines = self.source_text().splitlines()
+        if start > len(lines):
+            return None
+        end = min(end, len(lines))
+        return "\n".join(lines[start - 1 : end])
 
     def modifiers(self, node) -> list[str]:
         """Keyword modifiers only (annotations collected separately)."""

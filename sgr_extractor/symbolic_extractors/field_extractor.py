@@ -1,3 +1,5 @@
+import re
+
 from symbolic_extractors.base_extractor import base_extractor, id_allocator
 
 
@@ -18,6 +20,7 @@ class field_extractor(base_extractor):
         annotations = self.annotations(node)
         field_type = None
         fields = []
+        decl_span = self.member_span(node)
 
         for child in node.named_children:
             if child.type == "modifiers":
@@ -30,18 +33,31 @@ class field_extractor(base_extractor):
                             name_node = c
                             break
                 name = self.text(name_node) if name_node else None
+                dtype = field_type
+                for dim in child.children:
+                    if dim.type != "dimensions":
+                        continue
+                    brackets = re.sub(r"\s+", "", self.text(dim) or "[]")
+                    if dtype and brackets and not str(dtype).endswith(brackets):
+                        dtype = f"{dtype}{brackets}"
                 qn = self.qualify(
                     self.package_name,
                     f"{self.owner_name}.{name}" if self.owner_name and name else name,
                 )
+                var_span = self.span(child)
+                span = {
+                    "line_start": decl_span.get("line_start") or var_span.get("line_start"),
+                    "line_end": var_span.get("line_end") or decl_span.get("line_end"),
+                }
                 fields.append({
                     "id": self.ids.stable("F", qn or name or "field"),
                     "name": name,
                     "qualified_name": qn,
-                    "type": field_type,
+                    "type": dtype,
                     "modifiers": modifiers,
                     "annotations": annotations,
-                    "span": self.span(child),
+                    "span": span,
+                    "source": self.line_text(span),
                 })
             elif "annotation" not in child.type:
                 field_type = self.text(child)

@@ -105,6 +105,8 @@ class Method:
     variables: list[Variable] = field(default_factory=list)
     creations: list[CreationInfo] = field(default_factory=list)
     span: SourceSpan = field(default_factory=SourceSpan)
+    signature: str | None = None
+    source: str | None = None
 
 
 @dataclass
@@ -120,6 +122,8 @@ class Constructor:
     variables: list[Variable] = field(default_factory=list)
     creations: list[CreationInfo] = field(default_factory=list)
     span: SourceSpan = field(default_factory=SourceSpan)
+    signature: str | None = None
+    source: str | None = None
     synthetic: bool = False
     implicit: bool = False
 
@@ -133,6 +137,7 @@ class Field:
     modifiers: list[str] = field(default_factory=list)
     annotations: list[str] = field(default_factory=list)
     span: SourceSpan = field(default_factory=SourceSpan)
+    source: str | None = None
 
 
 @dataclass
@@ -150,6 +155,7 @@ class TypeDeclaration:
     constructors: list[Constructor] = field(default_factory=list)
     methods: list[Method] = field(default_factory=list)
     span: SourceSpan = field(default_factory=SourceSpan)
+    source: str | None = None
 
 
 @dataclass
@@ -302,6 +308,8 @@ def _method_from(d: dict) -> Method:
         variables=[_var_from(v) for v in d.get("variables") or []],
         creations=[_creation_from(c) for c in d.get("creations") or []],
         span=span_from_dict(d.get("span")),
+        signature=d.get("signature"),
+        source=d.get("source"),
     )
 
 
@@ -318,6 +326,8 @@ def _ctor_from(d: dict) -> Constructor:
         variables=[_var_from(v) for v in d.get("variables") or []],
         creations=[_creation_from(c) for c in d.get("creations") or []],
         span=span_from_dict(d.get("span")),
+        signature=d.get("signature"),
+        source=d.get("source"),
         synthetic=bool(d.get("synthetic")),
         implicit=bool(d.get("implicit")),
     )
@@ -332,6 +342,7 @@ def _field_from(d: dict) -> Field:
         modifiers=d.get("modifiers") or [],
         annotations=d.get("annotations") or [],
         span=span_from_dict(d.get("span")),
+        source=d.get("source"),
     )
 
 
@@ -350,4 +361,5 @@ def _type_from_dict(d: dict) -> TypeDeclaration:
         constructors=[_ctor_from(c) for c in d.get("constructors") or []],
         methods=[_method_from(m) for m in d.get("methods") or []],
         span=span_from_dict(d.get("span")),
+        source=d.get("source"),
     )

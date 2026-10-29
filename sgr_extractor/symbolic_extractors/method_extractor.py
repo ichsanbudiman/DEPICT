@@ -1,4 +1,10 @@
-from symbolic_extractors.base_extractor import base_extractor, id_allocator
+import re
+
+from symbolic_extractors.base_extractor import (
+    base_extractor,
+    format_signature,
+    id_allocator,
+)
 
 
 STATEMENT_KIND = {
@@ -58,7 +64,7 @@ class method_extractor(base_extractor):
             "calls": [],
             "variables": [],
             "creations": [],
-            "span": self.span(node),
+            "span": self.member_span(node),
         }
 
         if type_node is not None:
@@ -70,6 +76,8 @@ class method_extractor(base_extractor):
                     break
 
         result["parameters"] = self.extract_parameters(params_node, owner_qn=qn)
+        result["signature"] = format_signature(name, result["parameters"])
+        result["source"] = self.line_text(result["span"])
         if body_node is not None:
             result["statements"] = self.extract_statements(body_node)
             result["calls"] = self.extract_calls(body_node)
@@ -99,6 +107,13 @@ class method_extractor(base_extractor):
 
             if type_node is not None:
                 param_type = self.text(type_node)
+            # ``String argv[]`` stores the brackets on a dimensions node, not on the type.
+            for dim in child.children:
+                if dim.type != "dimensions":
+                    continue
+                brackets = re.sub(r"\s+", "", self.text(dim) or "[]")
+                if param_type and brackets and not param_type.endswith(brackets):
+                    param_type += brackets
             if name_node is not None:
                 param_name = self.text(name_node)
             else:
@@ -305,13 +320,36 @@ class method_extractor(base_extractor):
             if node.type == "assignment_expression":
                 left = node.child_by_field_name("left")
                 right = node.child_by_field_name("right")
+                operator = "="
+                for child in node.children:
+                    if child.type not in ("left", "right") and (self.text(child) or "").strip() in {
+                        "=", "+=", "-=", "*=", "/=", "&=", "|=", "^=", "%=",
+                        "<<=", ">>=", ">>>=",
+                    }:
+                        operator = (self.text(child) or "=").strip()
+                        break
                 return {
                     "id": self._node_id("EX", node),
                     "kind": "Assignment",
                     "span": self.span(node),
-                    "operator": "=",
+                    "operator": operator,
                     "lhs": _child(left),
                     "rhs": _child(right),
+                }
+
+            if node.type == "update_expression":
+                operand = next(iter(node.named_children), None)
+                operator = None
+                for child in node.children:
+                    if child.type in ("++", "--"):
+                        operator = child.type
+                        break
+                return {
+                    "id": self._node_id("EX", node),
+                    "kind": "Update",
+                    "span": self.span(node),
+                    "operator": operator,
+                    "lhs": _child(operand),
                 }
 
             if node.type == "field_access":

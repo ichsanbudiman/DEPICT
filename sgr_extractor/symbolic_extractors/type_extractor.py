@@ -1,4 +1,8 @@
-from symbolic_extractors.base_extractor import base_extractor, id_allocator
+from symbolic_extractors.base_extractor import (
+    base_extractor,
+    format_signature,
+    id_allocator,
+)
 from symbolic_extractors.field_extractor import field_extractor
 from symbolic_extractors.method_extractor import method_extractor
 from symbolic_extractors.constructor_extractor import constructor_extractor
@@ -54,7 +58,7 @@ class type_extractor(base_extractor):
             "fields": [],
             "constructors": [],
             "methods": [],
-            "span": self.span(node),
+            "span": self.member_span(node),
         }
 
         for child in node.named_children:
@@ -113,8 +117,38 @@ class type_extractor(base_extractor):
                 "variables": [],
                 "creations": [],
                 "span": result["span"],
+                "signature": format_signature(name, []),
                 "synthetic": True,
                 "implicit": True,
             })
 
+        # Annotation graphs number explicit constructors in source order (#1, #2),
+        # not by parameter arity. Implicit defaults stay ``#default``.
+        ordinal = 0
+        for ctor in result["constructors"]:
+            if ctor.get("implicit"):
+                continue
+            ordinal += 1
+            qn = ctor.get("qualified_name") or ctor.get("name") or "ctor"
+            ctor["id"] = self.ids.stable("CT", f"{qn}#{ordinal}")
+
+        # Interface members omit public/abstract in source; the annotation facts include them.
+        if kind == "interface":
+            if "abstract" not in result["modifiers"]:
+                result["modifiers"].append("abstract")
+            for method in result["methods"]:
+                mods = list(method.get("modifiers") or [])
+                if not any(m in mods for m in ("public", "protected", "private")):
+                    mods.insert(0, "public")
+                has_body = bool(method.get("statements"))
+                if (
+                    not has_body
+                    and "abstract" not in mods
+                    and "static" not in mods
+                    and "default" not in mods
+                ):
+                    mods.append("abstract")
+                method["modifiers"] = mods
+
+        result["source"] = self.line_text(result["span"])
         return result

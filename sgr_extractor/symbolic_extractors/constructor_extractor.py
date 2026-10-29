@@ -1,4 +1,4 @@
-from symbolic_extractors.base_extractor import id_allocator
+from symbolic_extractors.base_extractor import format_signature
 from symbolic_extractors.method_extractor import method_extractor
 
 
@@ -35,9 +35,11 @@ class constructor_extractor(method_extractor):
             "calls": [],
             "variables": [],
             "creations": [],
-            "span": self.span(node),
+            "span": self.member_span(node),
             "synthetic": False,
         }
+        result["signature"] = format_signature(name, result["parameters"])
+        result["source"] = self.line_text(result["span"])
 
         if body_node is not None:
             result["statements"] = self.extract_statements(body_node)

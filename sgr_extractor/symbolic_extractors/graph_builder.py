@@ -80,6 +80,29 @@ IDENTIFIER_NAME_KINDS = frozenset({
 })
 
 
+def _supertype_names(typ: TypeDeclaration) -> list[str]:
+    names: list[str] = []
+    if typ.extends is not None and typ.extends.name:
+        simple = simple_type_name(typ.extends.name)
+        if simple:
+            names.append(simple)
+    for iface in typ.implements:
+        simple = simple_type_name(iface.name)
+        if simple and simple not in names:
+            names.append(simple)
+    return names
+
+
+def simple_type_name(name: str | None) -> str | None:
+    """``PageStore`` from ``net.nutch.db.PageStore`` or ``PageStore<T>[]``."""
+    if not name:
+        return None
+    raw = name.split("<", 1)[0].replace("[]", "").strip()
+    if not raw:
+        return None
+    return raw.split(".")[-1]
+
+
 def normalize_modifiers(modifiers: list[str] | None) -> dict[str, bool]:
     present = set(modifiers or [])
     return {flag: flag in present for flag in MODIFIER_FLAGS}
@@ -236,7 +259,15 @@ class GraphBuilder:
             "generic_parameters": typ.generic_parameters,
             "line_start": typ.span.line_start,
             "line_end": typ.span.line_end,
+            "package": (
+                self._unit.package.name
+                if self._unit is not None and self._unit.package is not None
+                else None
+            ),
+            "supertypes": _supertype_names(typ),
         })
+        if typ.source:
+            self.nodes[-1]["source"] = typ.source
         if file_id is not None:
             self._edge(file_id, typ.id, "DEFINES")
 
@@ -263,6 +294,8 @@ class GraphBuilder:
                 "line_start": field.span.line_start,
                 "line_end": field.span.line_end,
             }
+            if field.source:
+                field_node["source"] = field.source
             raw = parsed["raw"]
             if raw and (raw.split(".")[-1] in COLLECTION_RAW_TYPES or parsed["is_array"]):
                 field_node["is_collection"] = True
@@ -306,10 +339,15 @@ class GraphBuilder:
             "line_start": callable_node.span.line_start,
             "line_end": callable_node.span.line_end,
         })
+        if callable_node.signature:
+            self.nodes[-1]["signature"] = callable_node.signature
+        if callable_node.source and not (is_constructor and getattr(callable_node, "implicit", False)):
+            self.nodes[-1]["source"] = callable_node.source
         if is_constructor:
             ctor = callable_node  # type: Constructor
             self.nodes[-1]["synthetic"] = bool(ctor.synthetic)
             self.nodes[-1]["implicit"] = bool(ctor.implicit)
+            self.nodes[-1]["return_type"] = "void"
         self._edge(
             typ.id,
             callable_node.id,
@@ -481,15 +519,23 @@ class GraphBuilder:
                 self._emit_expression(expr.id, arg, parent_edge="ARGUMENT")
 
         elif expr.kind == "Assignment":
+            compound = expr.operator not in (None, "=")
             if expr.lhs is not None:
                 prev = self._access_mode
-                self._access_mode = "write"
+                self._access_mode = "update" if compound else "write"
                 self._emit_expression(expr.id, expr.lhs, parent_edge="LHS")
                 self._access_mode = prev
             if expr.rhs is not None:
                 prev = self._access_mode
                 self._access_mode = "read"
                 self._emit_expression(expr.id, expr.rhs, parent_edge="RHS")
+                self._access_mode = prev
+
+        elif expr.kind == "Update":
+            if expr.lhs is not None:
+                prev = self._access_mode
+                self._access_mode = "update"
+                self._emit_expression(expr.id, expr.lhs, parent_edge="HAS_EXPRESSION")
                 self._access_mode = prev
 
         elif expr.kind == "FieldAccess":
@@ -520,6 +566,11 @@ class GraphBuilder:
             self._emit_expression(expr.id, child, parent_edge="HAS_EXPRESSION")
 
     def _emit_field_access(self, expr_id: str, field_id: str, owner_id: str) -> None:
+        # ``x++`` and ``x += 1`` are both a read and a write of the same field.
+        if self._access_mode == "update":
+            self._edge(expr_id, field_id, "READS_FIELD", order=self._current_stmt_order)
+            self._edge(expr_id, field_id, "WRITES_FIELD", order=self._current_stmt_order)
+            return
         edge = "WRITES_FIELD" if self._access_mode == "write" else "READS_FIELD"
         self._edge(expr_id, field_id, edge, order=self._current_stmt_order)
 
@@ -811,6 +862,8 @@ class GraphBuilder:
                 node.pop("qualified_name", None)
                 node.pop("datatype", None)
                 node.pop("type_name", None)
+                node.pop("source", None)
+                node.pop("signature", None)
             # Keep PrimitiveType.name (int/boolean) — semantic, not a program identifier label.
             if node.get("type") == "File":
                 node.pop("imports", None)
@@ -853,7 +906,7 @@ class GraphBuilder:
             et = e["type"]
             if et in (
                 "HAS_EXPRESSION", "HAS_STATEMENT", "THEN", "ELSE",
-                "LHS", "RHS", "ARGUMENT", "INITIALIZED_BY",
+                "LHS", "RHS", "ARGUMENT",
             ):
                 parent[e["target"]] = e["source"]
             elif et == "RECEIVER":
