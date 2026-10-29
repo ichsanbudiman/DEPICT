@@ -6,8 +6,26 @@ PKG = Path(__file__).resolve().parent
 DEPICT_ROOT = PKG.parent
 SGR_EXTRACTOR = DEPICT_ROOT / "sgr_extractor"
 
-# Default --output of script/extract_project.sh
-SGR_ROOT = DEPICT_ROOT / "dataset"
+def _sgr_root() -> Path:
+    """SGR directory. ``SGR_ROOT`` in ``.env`` wins; otherwise ``<repo>/dataset``."""
+    import os
+
+    env = DEPICT_ROOT / ".env"
+    if env.is_file():
+        from envfile import load_depict_env
+
+        load_depict_env()
+    raw = os.environ.get("SGR_ROOT", "").strip()
+    if not raw:
+        return DEPICT_ROOT / "dataset"
+    path = Path(raw).expanduser()
+    if not path.is_absolute():
+        return (DEPICT_ROOT / path).resolve()
+    return path
+
+
+# Each project is <SGR_ROOT>/<Project>/sgr/project.yaml
+SGR_ROOT = _sgr_root()
 
 # Member-graph JSON + features written here
 MEMBER_OUT = DEPICT_ROOT / "member_graphs"

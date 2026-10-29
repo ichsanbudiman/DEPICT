@@ -729,9 +729,9 @@ def convert_project(
     neighbourhood: str = NEIGHBOURHOOD_V1,
 ) -> None:
     neighbourhood = parse_neighbourhood(neighbourhood)
-    yaml_path = graph_dpd / folder / "model_graph" / "project.yaml"
+    yaml_path = graph_dpd / folder / "sgr" / "project.yaml"
     if not yaml_path.is_file():
-        raise FileNotFoundError(f"missing model_graph/project.yaml: {yaml_path}")
+        raise FileNotFoundError(f"missing sgr/project.yaml: {yaml_path}")
     print(f"load {yaml_path}")
     g = load_project_model(yaml_path)
     meta = load_metadata_document(graph_dpd / folder / "metadata.yaml")
@@ -770,7 +770,7 @@ def convert_project(
 
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(
-        description="SGR model_graph/project.yaml → annotation.json"
+        description="SGR sgr/project.yaml → annotation.json"
     )
     p.add_argument(
         "--graph-dpd",
@@ -778,7 +778,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         dest="graph_dpd",
         type=Path,
         default=SGR_ROOT,
-        help="Root of SGR project folders (each has model_graph/project.yaml)",
+        help="Root of SGR project folders (each has sgr/project.yaml)",
     )
     p.add_argument(
         "--gold",

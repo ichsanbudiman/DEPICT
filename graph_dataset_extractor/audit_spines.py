@@ -1,7 +1,7 @@
 """Three-bucket spine audit (docs/pattern_spines.md). Label is audit-only.
 
   PASS          spine present in pruned JSON
-  KEEPSET_DROP  spine in model_graph/project.yaml, missing in JSON
+  KEEPSET_DROP  spine in sgr/project.yaml, missing in JSON
   SGR_MISS      spine never in project.yaml
 
 Gold-noise flags are orthogonal (test root, multi-label, sample package).
@@ -484,10 +484,10 @@ def gold_noise_flags(gjson: dict, sgr: ProjectGraph) -> List[str]:
 
 
 def project_yaml_path(graph_dpd: Path, folder: str) -> Path:
-    yp = graph_dpd / folder / "model_graph" / "project.yaml"
+    yp = graph_dpd / folder / "sgr" / "project.yaml"
     if yp.is_file():
         return yp
-    return graph_dpd / folder.replace("_(", "_").replace(")", "") / "model_graph" / "project.yaml"
+    return graph_dpd / folder.replace("_(", "_").replace(")", "") / "sgr" / "project.yaml"
 
 
 def classify_graph(

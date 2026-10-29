@@ -4,7 +4,7 @@ SGR output layout (sgr_extractor)::
 
     <sgr-root>/<Project>/
       metadata.yaml
-      model_graph/project.yaml
+      sgr/project.yaml
 
 Member-graph output::
 
@@ -151,7 +151,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    pe = sub.add_parser("extract", help="Java tree -> model_graph/project.yaml")
+    pe = sub.add_parser("extract", help="Java tree -> sgr/project.yaml")
     pe.add_argument("--project", type=Path, required=True)
     pe.set_defaults(func=cmd_extract)
 

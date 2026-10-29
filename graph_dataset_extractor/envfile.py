@@ -9,7 +9,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from paths import DEPICT_ROOT
+DEPICT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def depict_env_path() -> Path:
