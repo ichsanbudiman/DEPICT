@@ -22,7 +22,7 @@ if str(CODE_DIR) not in sys.path:
 
 from annotation_io import catalogue_lines, find_instance, instance_label, load_document, write_document
 from constants import GOLD_CSV_NAME
-from paths import DATASET, GOLD_ADAPTER_WRONG_ROOT, GOLD_CSV, SPINE_OVERLAY
+from paths import DATASET, GOLD_ADAPTER_WRONG_ROOT, GOLD_CSV, GRAPH_FILE, SPINE_OVERLAY
 
 LIST_PATH = GOLD_ADAPTER_WRONG_ROOT
 OVERLAY = SPINE_OVERLAY
@@ -96,7 +96,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     for folder, stem in items:
         by_folder[folder].append(stem)
     for folder, stems in by_folder.items():
-        path = args.dataset / folder / "annotation.json"
+        path = args.dataset / folder / GRAPH_FILE
         if not path.is_file():
             print(f"missing {path}", file=sys.stderr)
             return 1

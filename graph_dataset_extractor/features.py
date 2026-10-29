@@ -29,7 +29,7 @@ from constants import (
     TYPE_FEAT_NAMES,
 )
 from keepset import ancestor_types, created_pairs_with_uses, infer_element_types, method_use_types
-from paths import DATASET, SGR_ROOT
+from paths import DATASET, GRAPH_FILE, SGR_ROOT
 from sgr_load import ProjectGraph, SgrNode, load_project_yaml
 CLASS_KIND = {"Class": 0.0, "Interface": 1.0, "Enum": 2.0, "Record": 3.0}
 
@@ -377,7 +377,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     for path, folder, inst in iter_instances(args.dataset, args.project):
         by_folder[folder].append((path, inst))
     if not by_folder:
-        print("no annotation.json", file=sys.stderr)
+        print(f"no {GRAPH_FILE}", file=sys.stderr)
         return 1
 
     graphs = nodes = 0

@@ -24,11 +24,12 @@ def _sgr_root() -> Path:
     return path
 
 
-# Each project is <SGR_ROOT>/<Project>/sgr/project.yaml
+# Each project is <SGR_ROOT>/<Project>/sgr_project.yaml
 SGR_ROOT = _sgr_root()
 
-# Member-graph JSON + features written here
-MEMBER_OUT = DEPICT_ROOT / "member_graphs"
+# graph.json and features/ are written beside <Project>/sgr_project.yaml
+GRAPH_FILE = "graph.json"
+MEMBER_OUT = SGR_ROOT
 
 GOLD_DIR = PKG / "gold"
 GOLD_CSV = GOLD_DIR / "dpd_graph_v3_bplus_balanced_labels_gt100.csv"

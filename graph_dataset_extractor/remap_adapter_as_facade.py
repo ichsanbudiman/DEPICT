@@ -19,7 +19,7 @@ from annotation_io import (
     write_document,
 )
 from constants import GOLD_CSV_NAME
-from paths import DATASET, GOLD_ADAPTER_AS_FACADE, GOLD_CSV, SPINE_OVERLAY
+from paths import DATASET, GOLD_ADAPTER_AS_FACADE, GOLD_CSV, GRAPH_FILE, SPINE_OVERLAY
 
 LIST_PATH = GOLD_ADAPTER_AS_FACADE
 OVERLAY = SPINE_OVERLAY
@@ -106,7 +106,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         for folder, stem in items:
             by_folder[folder].append(stem)
         for folder, stems in by_folder.items():
-            path = args.dataset / folder / "annotation.json"
+            path = args.dataset / folder / GRAPH_FILE
             if not path.is_file():
                 print(f"missing {path}", file=sys.stderr)
                 return 1
@@ -133,7 +133,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     for folder, stem in items:
         by_folder[folder].append(stem)
     for folder, stems in by_folder.items():
-        path = args.dataset / folder / "annotation.json"
+        path = args.dataset / folder / GRAPH_FILE
         if not path.is_file():
             print(f"missing {path}", file=sys.stderr)
             return 1

@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import Iterator, List, Optional, Tuple
 
+from paths import GRAPH_FILE
+
 
 def catalogue_lines(gold_csv: Path, project_name: str, file_path: str) -> List[int]:
     """Gold-CSV line numbers for one project file. Line 1 is the header."""
@@ -76,7 +78,7 @@ def pruned_view(inst: dict) -> dict:
 
 
 def annotation_paths(dataset: Path, project: Optional[str] = None) -> List[Path]:
-    files = sorted(dataset.glob("*/annotation.json"))
+    files = sorted(dataset.glob(f"*/{GRAPH_FILE}"))
     if project:
         files = [path for path in files if path.parent.name == project]
     return files

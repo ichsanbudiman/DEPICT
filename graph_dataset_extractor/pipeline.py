@@ -1,15 +1,11 @@
 """Run SGR extract then member-graph convert on the same project tree.
 
-SGR output layout (sgr_extractor)::
+Each project directory holds the SGR and the graph written from it::
 
     <sgr-root>/<Project>/
       metadata.yaml
-      sgr/project.yaml
-
-Member-graph output::
-
-    <out>/<Project>/
-      annotation.json
+      sgr_project.yaml
+      graph.json
       features/<instance_id>/*.csv
 """
 
@@ -151,11 +147,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    pe = sub.add_parser("extract", help="Java tree -> sgr/project.yaml")
+    pe = sub.add_parser("extract", help="Java tree -> sgr_project.yaml")
     pe.add_argument("--project", type=Path, required=True)
     pe.set_defaults(func=cmd_extract)
 
-    pc = sub.add_parser("convert", help="SGR -> annotation.json + feature CSVs")
+    pc = sub.add_parser("convert", help="SGR -> graph.json + feature CSVs")
     pc.set_defaults(func=cmd_convert)
 
     ps = sub.add_parser("stamp", help="spine stamp, Adapter remap, wrong-root off")

@@ -37,13 +37,13 @@ EXIT_CODE=$?
 
 echo ""
 echo "=========================================="
-echo "ANNOTATION FILES"
+echo "GRAPH FILES"
 echo "=========================================="
 python3 - <<'PY'
 from pathlib import Path
-root = Path("member_graphs")
-files = sorted(root.glob("*/annotation.json"))
-print("annotation files", len(files))
+root = Path("dataset")
+files = sorted(root.glob("*/graph.json"))
+print("graph files", len(files))
 for path in files:
     print(path)
 PY

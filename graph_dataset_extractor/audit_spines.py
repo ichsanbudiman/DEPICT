@@ -1,7 +1,7 @@
 """Three-bucket spine audit (docs/pattern_spines.md). Label is audit-only.
 
   PASS          spine present in pruned JSON
-  KEEPSET_DROP  spine in sgr/project.yaml, missing in JSON
+  KEEPSET_DROP  spine in sgr_project.yaml, missing in JSON
   SGR_MISS      spine never in project.yaml
 
 Gold-noise flags are orthogonal (test root, multi-label, sample package).
@@ -34,7 +34,7 @@ from keepset import (
     method_use_types,
 )
 from sgr_load import ProjectGraph, load_project_yaml
-from paths import DATASET, SAMPLE, SGR_ROOT, V5_ROOT
+from paths import DATASET, GRAPH_FILE, SAMPLE, SGR_ROOT, V5_ROOT
 
 FACTORY = {"FactoryMethod", "AbstractFactory"}
 
@@ -484,10 +484,10 @@ def gold_noise_flags(gjson: dict, sgr: ProjectGraph) -> List[str]:
 
 
 def project_yaml_path(graph_dpd: Path, folder: str) -> Path:
-    yp = graph_dpd / folder / "sgr" / "project.yaml"
+    yp = graph_dpd / folder / "sgr_project.yaml"
     if yp.is_file():
         return yp
-    return graph_dpd / folder.replace("_(", "_").replace(")", "") / "sgr" / "project.yaml"
+    return graph_dpd / folder.replace("_(", "_").replace(")", "") / "sgr_project.yaml"
 
 
 def classify_graph(
@@ -566,7 +566,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     rows = collect_audit_rows(args.dataset, args.graph_dpd, args.project)
     if not rows:
-        print("no annotation.json", file=sys.stderr)
+        print(f"no {GRAPH_FILE}", file=sys.stderr)
         return 1
 
     buckets = Counter(r["bucket"] for r in rows)

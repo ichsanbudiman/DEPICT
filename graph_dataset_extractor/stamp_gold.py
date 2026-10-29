@@ -15,7 +15,7 @@ if str(CODE_DIR) not in sys.path:
 from annotation_io import catalogue_lines
 from audit_spines import collect_audit_rows
 from constants import GOLD_CSV_NAME
-from paths import DATASET, GOLD_CSV, LOGS_DIR, SPINE_OVERLAY, SGR_ROOT
+from paths import DATASET, GOLD_CSV, GRAPH_FILE, LOGS_DIR, SPINE_OVERLAY, SGR_ROOT
 
 OVERLAY = SPINE_OVERLAY
 REPORT = LOGS_DIR / "stamp_clean.csv"
@@ -110,7 +110,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     rows = collect_audit_rows(args.dataset, args.graph_dpd, args.project)
     if not rows:
-        print("no annotation.json", file=sys.stderr)
+        print(f"no {GRAPH_FILE}", file=sys.stderr)
         return 1
 
     line_active: Dict[int, bool] = {}

@@ -2,7 +2,7 @@
 
   python3 convert.py \\
     --sgr-root ../../dataset \\
-    --out ../../member_graphs \\
+    --out ../../dataset \\
     --project JUnit_v3.7
 """
 
@@ -40,7 +40,7 @@ from keepset import (
     structural_features,
     v5_edges,
 )
-from paths import GOLD_CSV, MEMBER_OUT, SGR_ROOT
+from paths import GOLD_CSV, GRAPH_FILE, MEMBER_OUT, SGR_ROOT
 from sgr_load import (
     ProjectGraph,
     SgrNode,
@@ -729,9 +729,9 @@ def convert_project(
     neighbourhood: str = NEIGHBOURHOOD_V1,
 ) -> None:
     neighbourhood = parse_neighbourhood(neighbourhood)
-    yaml_path = graph_dpd / folder / "sgr" / "project.yaml"
+    yaml_path = graph_dpd / folder / "sgr_project.yaml"
     if not yaml_path.is_file():
-        raise FileNotFoundError(f"missing sgr/project.yaml: {yaml_path}")
+        raise FileNotFoundError(f"missing sgr_project.yaml: {yaml_path}")
     print(f"load {yaml_path}")
     g = load_project_model(yaml_path)
     meta = load_metadata_document(graph_dpd / folder / "metadata.yaml")
@@ -760,17 +760,17 @@ def convert_project(
     document = annotation_document(
         g, recs, meta.get("sources") or {}, graphs, max_hops, neighbourhood
     )
-    ann_path = proj_out / "annotation.json"
+    ann_path = proj_out / GRAPH_FILE
     write_json(ann_path, document)
     print(
-        f"  annotation {ann_path}  instances={len(document['instances'])} "
+        f"  graph {ann_path}  instances={len(document['instances'])} "
         f"snippets={len(document['snippets'])}"
     )
 
 
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(
-        description="SGR sgr/project.yaml → annotation.json"
+        description="SGR sgr_project.yaml → graph.json"
     )
     p.add_argument(
         "--graph-dpd",
@@ -778,7 +778,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         dest="graph_dpd",
         type=Path,
         default=SGR_ROOT,
-        help="Root of SGR project folders (each has sgr/project.yaml)",
+        help="Root of SGR project folders (each has sgr_project.yaml)",
     )
     p.add_argument(
         "--gold",
