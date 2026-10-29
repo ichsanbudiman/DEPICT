@@ -28,7 +28,7 @@ echo "=========================================="
 HOPS=1
 NEIGH=v2
 # 1 reads snippet text from JAVA_PROJECTS. Leave 0 when metadata.yaml already has sources.
-JAVA_TEXT=1
+JAVA_TEXT=0
 echo "Job ID:        ${SLURM_JOB_ID:-local}"
 echo "Node:          ${SLURM_NODELIST:-local}"
 echo "Date:          $(date)"
