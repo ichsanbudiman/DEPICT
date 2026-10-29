@@ -41,7 +41,8 @@ from keepset import (
     structural_features,
     v5_edges,
 )
-from paths import GOLD_CSV, GRAPH_FILE, MEMBER_OUT, SGR_ROOT
+from java_text import load_windows, stamp_node_files
+from paths import GOLD_CSV, GRAPH_FILE, JAVA_PROJECTS, MEMBER_OUT, SGR_ROOT
 from sgr_load import (
     ProjectGraph,
     SgrNode,
@@ -834,6 +835,7 @@ def convert_project(
     out_root: Path,
     max_hops: int = 1,
     neighbourhood: str = NEIGHBOURHOOD_V1,
+    java_text: bool = False,
 ) -> None:
     neighbourhood = parse_neighbourhood(neighbourhood)
     yaml_path = graph_dpd / folder / "sgr_project.yaml"
@@ -842,6 +844,11 @@ def convert_project(
     print(f"load {yaml_path}")
     g = load_project_model(yaml_path)
     meta = load_metadata_document(graph_dpd / folder / "metadata.yaml")
+    project_name = recs[0]["project_name"] if recs else (g.project_name or folder)
+    stored = dict(meta.get("sources") or {})
+    display_to_raw: dict = {}
+    if java_text and not stored:
+        display_to_raw = stamp_node_files(g, meta, project_name)
     print(f"  nodes={len(g.nodes)} edges={len(g.edges)} graphs={len(recs)}")
     proj_out = out_root / folder
     for stale in ("subgraph", "subgraph_pruned"):
@@ -864,8 +871,28 @@ def convert_project(
             f"edges={e} out_of_view={hidden_n} hops={max_hops} "
             f"neighbourhood={neighbourhood} label={rec['label']}"
         )
+    sources = stored
+    if java_text and stored:
+        print(f"  java text skipped: sgr already has snippets={len(stored)}")
+    elif java_text:
+        if JAVA_PROJECTS is not None and JAVA_PROJECTS.is_dir():
+            used = [
+                node["file"]
+                for graph in graphs
+                for node in graph["nodes"]
+                if node.get("file")
+            ]
+            filled, missing = load_windows(
+                used, display_to_raw, JAVA_PROJECTS, folder, project_name
+            )
+            sources.update(filled)
+            print(f"  java text files={len(filled)} missing={missing}")
+        elif JAVA_PROJECTS is None:
+            print("  java text skipped: JAVA_PROJECTS is unset")
+        else:
+            print(f"  java text skipped: not a directory: {JAVA_PROJECTS}")
     document = annotation_document(
-        g, recs, meta.get("sources") or {}, graphs, max_hops, neighbourhood
+        g, recs, sources, graphs, max_hops, neighbourhood
     )
     ann_path = proj_out / GRAPH_FILE
     write_json(ann_path, document)
@@ -925,6 +952,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         default=NEIGHBOURHOOD_V2,
         help="v2 is the paper's collaboration neighbourhood (default). v1 is the original keep-set",
     )
+    p.add_argument(
+        "--java-text",
+        action="store_true",
+        help="Read snippet text from JAVA_PROJECTS when metadata.yaml has no sources",
+    )
     args = p.parse_args(argv)
     active_only = not args.include_inactive
     if not args.gold.is_file():
@@ -933,7 +965,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     if not args.graph_dpd.is_dir():
         print(f"Graph-DPD root missing: {args.graph_dpd}", file=sys.stderr)
         return 1
-    print(f"neighbourhood={args.neighbourhood} hops={args.hops}")
+    print(
+        f"neighbourhood={args.neighbourhood} hops={args.hops} "
+        f"java_text={'on' if args.java_text else 'off'}"
+    )
     groups = load_gold_groups(args.gold, args.graph_dpd, active_only, args.project)
     if not groups:
         print("no gold rows matched Graph-DPD folders", file=sys.stderr)
@@ -947,6 +982,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 args.out,
                 args.hops,
                 args.neighbourhood,
+                args.java_text,
             )
         except Exception as exc:
             print(f"FAIL {folder}: {exc}", file=sys.stderr)

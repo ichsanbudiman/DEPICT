@@ -27,6 +27,8 @@ echo "GRAPH DATASET EXTRACTOR"
 echo "=========================================="
 HOPS=1
 NEIGH=v2
+# 1 reads snippet text from JAVA_PROJECTS. Leave 0 when metadata.yaml already has sources.
+JAVA_TEXT=0
 echo "Job ID:        ${SLURM_JOB_ID:-local}"
 echo "Node:          ${SLURM_NODELIST:-local}"
 echo "Date:          $(date)"
@@ -34,9 +36,10 @@ echo "Repo:          $(pwd)"
 echo "Python:        $(command -v python3)  $(python3 --version 2>&1)"
 echo "Neighbourhood: ${NEIGH}"
 echo "Hops:          ${HOPS}"
+echo "Java text:     ${JAVA_TEXT}"
 echo "=========================================="
 
-bash script/from_sgr.sh "" "" "" "$HOPS" "$NEIGH"
+bash script/from_sgr.sh "" "" "" "$HOPS" "$NEIGH" "$JAVA_TEXT"
 EXIT_CODE=$?
 
 echo ""

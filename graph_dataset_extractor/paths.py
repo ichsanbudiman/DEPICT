@@ -27,6 +27,22 @@ def _sgr_root() -> Path:
 # Each project is <SGR_ROOT>/<Project>/sgr_project.yaml
 SGR_ROOT = _sgr_root()
 
+
+def _java_projects() -> Path | None:
+    """Java checkouts. ``JAVA_PROJECTS`` in ``.env``. Unset leaves snippets empty."""
+    import os
+
+    raw = os.environ.get("JAVA_PROJECTS", "").strip()
+    if not raw:
+        return None
+    path = Path(raw).expanduser()
+    if not path.is_absolute():
+        return (DEPICT_ROOT / path).resolve()
+    return path
+
+
+JAVA_PROJECTS = _java_projects()
+
 # graph.json and features/ are written beside <Project>/sgr_project.yaml
 GRAPH_FILE = "graph.json"
 MEMBER_OUT = SGR_ROOT

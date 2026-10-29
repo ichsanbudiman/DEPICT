@@ -63,6 +63,8 @@ def cmd_convert(args: argparse.Namespace) -> int:
     if args.include_inactive:
         argv.append("--include-inactive")
     argv.extend(["--hops", str(args.hops), "--neighbourhood", args.neighbourhood])
+    if args.java_text:
+        argv.append("--java-text")
     rc = _run(convert.main, argv)
     if rc:
         return rc
@@ -143,6 +145,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         choices=NEIGHBOURHOODS,
         default=NEIGHBOURHOOD_V2,
         help="v2 is the paper's collaboration neighbourhood (default). v1 is the original keep-set",
+    )
+    p.add_argument(
+        "--java-text",
+        action="store_true",
+        help="Read snippet text from JAVA_PROJECTS when the SGR has no sources",
     )
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)
