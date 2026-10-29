@@ -1,0 +1,13 @@
+# v5: Adapter gold whose root is the wrong role (not a wrapper).
+# JSON gold.active → false. Filename stays *_Adapter. v4 gold CSV is not edited.
+# Convert/stamp would restore active; re-run inactivate_adapter_wrong_root.py after stamp.
+# Not SGR_MISS recovery. Fan-out is not a reason to drop a real wrapper.
+# Columns: folder<TAB>stem
+JHotDraw_v5.1	subgraph_CH_ifa_draw_figures_RoundRectangleFigure_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_contrib_PolygonHandle_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_figures_FontSizeHandle_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_standard_LocatorHandle_Adapter
+Nutch_v0.4	subgraph_net_nutch_pagedb_FetchListEntry_Adapter
+spring-stringtemplate	subgraph_com_watchitlater_spring_StringTemplateView_Adapter
+ant	subgraph_org_apache_tools_ant_taskdefs_optional_extension_ExtensionAdapter_Adapter
+spring-migration-analyzer	subgraph_org_springframework_migrationanalyzer_contributions_apiusage_ApiUsageDetectingAsmVisitor_Adapter

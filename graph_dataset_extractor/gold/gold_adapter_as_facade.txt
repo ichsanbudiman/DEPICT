@@ -1,0 +1,31 @@
+# Locked Adapter→Facade training remap (20 stems). Filename stays *_Adapter.
+# Currently applied. Undo: remap_adapter_as_facade.py --undo (see
+# logs/versions/adapter_as_facade/README.md).
+# v4 gold CSV is not edited. Re-run remap_adapter_as_facade.py --apply after convert.
+# Do not apply the pass-2 trio (commented below): that was Adapter 25→22 / Facade 88→91.
+# Columns: folder<TAB>stem
+ChenSun	subgraph_com_mysql_jdbc_ConnectionImpl_Adapter
+ChenSun	subgraph_com_mysql_jdbc_BlobFromLocator_Adapter
+JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLPackage_Adapter
+JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLType_Adapter
+JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLField_Adapter
+JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLLine_Adapter
+JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_refactor_ExtractMethodDialog_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_standard_StandardDrawingView_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_figures_TextFigure_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_figures_PolyLineFigure_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_contrib_PolygonFigure_Adapter
+JHotDraw_v5.1	subgraph_CH_ifa_draw_figures_LineConnection_Adapter
+cdt	subgraph_org_eclipse_cdt_internal_core_pdom_indexer_ProjectIndexerInputAdapter_Adapter
+cdt	subgraph_org_eclipse_cdt_internal_ui_refactoring_DocumentAdapter_Adapter
+cdt	subgraph_org_eclipse_cdt_internal_ui_editor_DocumentAdapter_Adapter
+DrJava_v20030203	subgraph_edu_rice_cs_drjava_model_repl_newjvm_InterpreterJVM_Adapter
+cdo	subgraph_org_eclipse_net4j_spi_db_DBAdapter_Adapter
+Nutch_v0.4	subgraph_net_nutch_fetcher_FetcherOutput_Adapter
+jakarta-struts-1.2.4-src	subgraph_org_apache_struts_tiles_definition_ComponentDefinitionsFactoryWrapper_Adapter
+po-mindstorms	subgraph_penoplatinum_grid_FacadeSector_Adapter
+# --- consistency pass 2 (2026-09-14) NOT APPLIED ---
+# These three made Adapter 25→22 and Facade 88→91. Reverted; stay Adapter.
+# DrJava_v20020804	subgraph_edu_rice_cs_drjava_model_repl_newjvm_InterpreterJVM_Adapter
+# JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLMethod_Adapter
+# JRefactory_v2.6.24	subgraph_org_acm_seguin_uml_UMLNestedType_Adapter

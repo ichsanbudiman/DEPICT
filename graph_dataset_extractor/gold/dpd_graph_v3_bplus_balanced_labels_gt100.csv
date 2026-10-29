@@ -1,0 +1,1015 @@
+file_path,project_name,label,active
+A7B36ASS/ASS-CoolSystem/src/cz/fel/cvut/ass/TeacherFactory.java,A7B36ASS,AbstractFactory,1
+A7B36ASS/ASS-CoolSystem/src/cz/fel/cvut/ass/StudentFactory.java,A7B36ASS,AbstractFactory,1
+A7B36ASS/ASS-CoolSystem/src/cz/fel/cvut/ass/AbstractFactory.java,A7B36ASS,AbstractFactory,0
+ASEME/SRMdesign/src/SRM/impl/SRMFactoryImpl.java,ASEME,AbstractFactory,1
+ASEME/SRMdesign/src/SRM/SRMFactory.java,ASEME,AbstractFactory,0
+ASEME/IACdesign/src/IAC/IACFactory.java,ASEME,AbstractFactory,0
+ASEME/SUCdesign/src/SUC/SUCFactory.java,ASEME,AbstractFactory,0
+ASEME/AIPdesign/src/AIP/AIPFactory.java,ASEME,AbstractFactory,0
+ASEME/StateChartPlugIn/src/statechart/impl/StatechartFactoryImpl.java,ASEME,AbstractFactory,1
+ASEME/SUCdesign/src/SUC/impl/SUCFactoryImpl.java,ASEME,AbstractFactory,1
+ASEME/IACdesign/src/IAC/impl/IACFactoryImpl.java,ASEME,AbstractFactory,0
+ASEME/StateChartPlugIn/src/statechart/StatechartFactory.java,ASEME,AbstractFactory,0
+ASEME/AIPdesign/src/AIP/impl/AIPFactoryImpl.java,ASEME,AbstractFactory,1
+Android-Simple-Social-Sharing/SimpleSocialSharingExample/src/com/nostra13/example/socialsharing/HomeActivity.java,Android-Simple-Social-Sharing,Observer,0
+Android-Simple-Social-Sharing/SimpleSocialSharing/src/com/nostra13/socialsharing/twitter/TwitterFacade.java,Android-Simple-Social-Sharing,Observer,0
+AndroidBillingLibrary/AndroidBillingLibraryTest/src/net/robotmedia/billing/helper/MockBillingObserver.java,AndroidBillingLibrary,Observer,0
+AndroidBillingLibrary/AndroidBillingLibrary/src/net/robotmedia/billing/BillingController.java,AndroidBillingLibrary,Observer,1
+Android_1/org.eclipse.ecf.android/src/org/eclipse/ecf/android/IClientSocketFactory.java,Android_1,FactoryMethod,0
+Android_1/org.eclipse.ecf.android/src/org/eclipse/ecf/android/IServerSocketFactory.java,Android_1,None,0
+Azureus v2.5.0.0/src/org/gudy/azureus2/pluginsimpl/local/messaging/MessageAdapter.java,Azureus v2.5.0.0,Adapter,1
+Azureus v2.5.0.0/src/com/aelitis/azureus/core/dht/router/impl/DHTRouterImpl.java,Azureus v2.5.0.0,Observer,1
+BMach/src/bmach/logic/processor/IProcessor.java,BMach,None,0
+BMach/src/util/patterns/observer/ISubject.java,BMach,Observer,0
+BMach/src/bmach/ui/gui/BMachPanel.java,BMach,Observer,0
+CS230-Software-Project/src/edu/ycp/casino/client/RouletteView.java,CS230-Software-Project,Observer,0
+CS230-Software-Project/src/edu/ycp/casino/client/RouletteView.java,CS230-Software-Project,Observer,0
+Catroid/catroid/src/org/catrobat/catroid/ui/adapter/PrototypeBrickAdapter.java,Catroid,Adapter,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionImpl.java,ChenSun,Facade,1
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/JDBC4SuspendableXAConnection.java,ChenSun,Observer,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/MysqlPooledConnection.java,ChenSun,Observer,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/V1toV2StatementInterceptorAdapter.java,ChenSun,Adapter,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/JDBC4MysqlXAConnection.java,ChenSun,Observer,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionProperties.java,ChenSun,None,0
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionPropertiesTransform.java,ChenSun,None,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ReflectiveStatementInterceptorAdapter.java,ChenSun,Adapter,0
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/JDBC4MysqlXAConnection.java,ChenSun,Observer,0
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ReflectiveStatementInterceptorAdapter.java,ChenSun,Adapter,1
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/V1toV2StatementInterceptorAdapter.java,ChenSun,Adapter,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionImpl.java,ChenSun,Facade,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionImpl.java,ChenSun,Facade,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/DatabaseMetaData.java,ChenSun,Adapter,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/MysqlXADataSource.java,ChenSun,Adapter,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/Statement.java,ChenSun,None,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/BlobFromLocator.java,ChenSun,Facade,1
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/MysqlDataSource.java,ChenSun,Adapter,1
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/ConnectionProperties.java,ChenSun,None,1
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/JDBC4SuspendableXAConnection.java,ChenSun,Observer,0
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/DatabaseMetaData.java,ChenSun,Adapter,0
+ChenSun/Phase2/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/MysqlXADataSource.java,ChenSun,Adapter,0
+ChenSun/CS5430/jars/mysql-connector-java-5.1.18/src/com/mysql/jdbc/jdbc2/optional/MysqlPooledConnection.java,ChenSun,Observer,1
+Cours-3eme-ann-e/Systemes_distribues/WebServiceREST/src/java/service/VolFacadeREST.java,Cours-3eme-ann-e,Facade,0
+Cours-3eme-ann-e/Systemes_distribues/Application/Application-ejb/src/java/SysDistBean/SysDistBean.java,Cours-3eme-ann-e,Facade,0
+Cours-3eme-ann-e/Systemes_distribues/Application/Application-ejb/src/java/SysDistBean/SysDistBeanRemote.java,Cours-3eme-ann-e,Facade,0
+Cours-3eme-ann-e/Systemes_distribues/WebServiceREST/src/java/service/AeroportFacadeREST.java,Cours-3eme-ann-e,Facade,0
+DimSim/PreBuildBinaries/StreamingServer/red5/src/org/red5/server/net/protocol/SimpleProtocolCodecFactory.java,DimSim,AbstractFactory,0
+DimSim/PreBuildBinaries/StreamingServer/red5/src/org/red5/server/net/rtmp/codec/RTMPMinaCodecFactory.java,DimSim,AbstractFactory,0
+DimSim/PreBuildBinaries/StreamingServer/red5/src/org/red5/server/net/remoting/codec/RemotingCodecFactory.java,DimSim,AbstractFactory,0
+DimSim/PreBuildBinaries/StreamingServer/red5/src/org/red5/server/net/rtmpt/codec/RTMPTCodecFactory.java,DimSim,AbstractFactory,0
+DimSim/PreBuildBinaries/StreamingServer/red5/src/org/red5/server/net/rtmp/codec/RTMPCodecFactory.java,DimSim,AbstractFactory,0
+DownloadProvider/src/com/mozillaonline/providers/downloads/DownloadService.java,DownloadProvider,Facade,1
+DownloadProvider/src/com/mozillaonline/providers/downloads/DownloadService.java,DownloadProvider,Facade,1
+DrJava v20020619/src/edu/rice/cs/drjava/model/repl/newjvm/InterpreterJVM.java,DrJava v20020619,Adapter,0
+DrJava v20020804/src/edu/rice/cs/drjava/model/repl/newjvm/InterpreterJVM.java,DrJava v20020804,Adapter,1
+DrJava v20030203/src/edu/rice/cs/drjava/model/repl/newjvm/InterpreterJVM.java,DrJava v20030203,Facade,1
+DrJava v20030203/src/edu/rice/cs/drjava/platform/PlatformFactory.java,DrJava v20030203,FactoryMethod,0
+DrJava v20040326/src/edu/rice/cs/drjava/model/repl/JavaInterpreter.java,DrJava v20040326,Adapter,0
+DynDNS v0.7/DNS/Address.java,DynDNS v0.7,Facade,1
+DynDNS v1.0/org/xbill/DNS/Record.java,DynDNS v1.0,FactoryMethod,0
+DynDNS v1.0/org/xbill/DNS/ExtendedResolver.java,DynDNS v1.0,Facade,1
+Eclipse JDT v3.4/src/org/eclipse/jdt/internal/core/DeltaProcessingState.java,Eclipse JDT v3.4,Observer,1
+Eclipse JDT v3.4/src/org/eclipse/jdt/internal/ui/model/JavaModelAdapterFactory.java,Eclipse JDT v3.4,Adapter,0
+Eclipse JDT v3.4/src/org/eclipse/jdt/core/dom/ASTVisitor.java,Eclipse JDT v3.4,Visitor,1
+Emma/core/java12/com/vladium/emma/report/AbstractItemVisitor.java,Emma,Visitor,1
+Emma/core/java12/com/vladium/jcd/cls/constant/ICONSTANTVisitor.java,Emma,Visitor,0
+Emma/core/java12/com/vladium/jcd/cls/ClassDef.java,Emma,Visitor,0
+Emma/core/java12/com/vladium/emma/instr/InstrVisitor.java,Emma,Visitor,1
+Emma/core/java12/com/vladium/emma/instr/InstrVisitor.java,Emma,Visitor,1
+Emma/core/java12/com/vladium/emma/report/AbstractReportGenerator.java,Emma,Visitor,0
+Emma/core/java12/com/vladium/emma/report/IItemVisitor.java,Emma,Visitor,0
+Emma/core/java12/com/vladium/jcd/parser/ClassDefParser.java,Emma,Visitor,0
+Emma/core/java12/com/vladium/emma/instr/InstrVisitor.java,Emma,Visitor,1
+Emma/core/java12/com/vladium/emma/instr/InstrVisitor.java,Emma,Visitor,1
+GanttProject v1.10.2/src/net/sourceforge/ganttproject/task/TaskManagerImpl.java,GanttProject v1.10.2,Facade,1
+Generic-Graph-View/org.eclipse.xtext.graphview/emf-gen/org/eclipse/xtext/graphview/instancemodel/AbstractInstance.java,Generic-Graph-View,None,1
+Generic-Graph-View/org.eclipse.xtext.graphview.map/emf-gen/org/eclipse/xtext/graphview/map/graphViewMapping/impl/GraphViewMappingFactoryImpl.java,Generic-Graph-View,AbstractFactory,1
+Generic-Graph-View/org.eclipse.xtext.graphview/emf-gen/org/eclipse/xtext/graphview/instancemodel/InstancemodelFactory.java,Generic-Graph-View,AbstractFactory,0
+Generic-Graph-View/org.eclipse.xtext.graphview.map/emf-gen/org/eclipse/xtext/graphview/map/graphViewMapping/AbstractMappingReference.java,Generic-Graph-View,None,1
+Generic-Graph-View/org.eclipse.xtext.graphview.style/src-gen/org/eclipse/xtext/graphview/style/graphViewStyle/impl/GraphViewStyleFactoryImpl.java,Generic-Graph-View,AbstractFactory,1
+Generic-Graph-View/org.eclipse.xtext.graphview.map/emf-gen/org/eclipse/xtext/graphview/map/graphViewMapping/GraphViewMappingFactory.java,Generic-Graph-View,AbstractFactory,0
+Generic-Graph-View/org.eclipse.xtext.graphview.style/src-gen/org/eclipse/xtext/graphview/style/graphViewStyle/GraphViewStyleFactory.java,Generic-Graph-View,AbstractFactory,0
+Generic-Graph-View/org.eclipse.xtext.graphview/emf-gen/org/eclipse/xtext/graphview/instancemodel/impl/InstancemodelFactoryImpl.java,Generic-Graph-View,AbstractFactory,1
+Generic-Graph-View/org.eclipse.xtext.graphview.map/emf-gen/org/eclipse/xtext/graphview/map/graphViewMapping/MappingCall.java,Generic-Graph-View,None,0
+Gombos/src/gombos/webbrowser/Browser.java,Gombos,Facade,1
+JEdit v4.2 From Source/org/gjt/sp/jedit/gui/DockableWindowManager.java,JEdit v4.2 (From Source),Facade,1
+JEdit v4.2 From Source/org/gjt/sp/jedit/EditBus.java,JEdit v4.2 (From Source),Observer,0
+JEdit v4.2 From Source/org/gjt/sp/jedit/buffer/BufferChangeAdapter.java,JEdit v4.2 (From Source),Adapter,0
+JEdit v4.2 From Source/org/gjt/sp/jedit/EBComponent.java,JEdit v4.2 (From Source),None,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/SelectionTool.java,JHotDraw v5.1,FactoryMethod,1
+JHotDraw v5.1/src/CH/ifa/draw/standard/SelectAreaTracker.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/PolyLineConnector.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/NullHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/LineConnection.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/standard/LocatorHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/FontSizeHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/StandardDrawingView.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/figures/TextFigure.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/figures/PolyLineHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/ChangeConnectionStartHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/TextFigure.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/figures/RoundRectangleFigure.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/samples/nothing/NothingApp.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/StandardDrawing.java,JHotDraw v5.1,Observer,1
+JHotDraw v5.1/src/CH/ifa/draw/standard/NorthWestHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,Observer,0
+JHotDraw v5.1/src/CH/ifa/draw/contrib/TriangleRotationHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/applet/DrawApplet.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/NorthEastHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/GroupHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/contrib/PolygonFigure.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/figures/PolyLineFigure.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/applet/DrawApplet.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/contrib/PolygonScaleHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/LineConnection.java,JHotDraw v5.1,Facade,1
+JHotDraw v5.1/src/CH/ifa/draw/standard/NorthHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/EastHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/WestHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/SouthWestHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/SelectionTool.java,JHotDraw v5.1,FactoryMethod,1
+JHotDraw v5.1/src/CH/ifa/draw/standard/ChangeConnectionEndHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/ChopBoxConnector.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/samples/pert/PertFigure.java,JHotDraw v5.1,Observer,0
+JHotDraw v5.1/src/CH/ifa/draw/framework/Handle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/framework/Figure.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractConnector.java,JHotDraw v5.1,Adapter,1
+JHotDraw v5.1/src/CH/ifa/draw/samples/net/NetApp.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/contrib/PolygonHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/figures/ShortestDistanceConnector.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/AbstractFigure.java,JHotDraw v5.1,Observer,0
+JHotDraw v5.1/src/CH/ifa/draw/framework/Connector.java,JHotDraw v5.1,FactoryMethod,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/SouthEastHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/standard/SouthHandle.java,JHotDraw v5.1,Adapter,0
+JHotDraw v5.1/src/CH/ifa/draw/applet/DrawApplet.java,JHotDraw v5.1,Observer,0
+JHotDraw v5.4b2/src/CH/ifa/draw/application/DrawApplication.java,JHotDraw v5.4b2,Facade,1
+JHotDraw v5.4b2/src/CH/ifa/draw/standard/StandardDrawing.java,JHotDraw v5.4b2,Observer,1
+JRefactory v2.6.24/src/org/acm/seguin/pretty/PrettyPrintVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTReturnStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTArrayDimsAndInits.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/common/SourceBrowser.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTClassDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/field/RemoveFieldFromSubclassVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/refactor/type/MoveClassVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTFieldDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTMultiplicativeExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/VariableSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/SimpleNode.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTClassBody.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/ParameterSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLNestedType.java,JRefactory v2.6.24,Adapter,1
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/IdentifyMethodVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTSwitchLabel.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTExplicitConstructorInvocation.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/build/BuildExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/RenameParameterVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTImportDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTInitializer.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTBlock.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTInstanceOfExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLPackage.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/uml/line/SizableLabel.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTFormalParameter.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/common/MultipleDirClassDiagramReloader.java,JRefactory v2.6.24,Adapter,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTType.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLType.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTSynchronizedStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/build/BuildExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/metrics/GatherData.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLType.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTShiftExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/awt/MoveItemAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTDoStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/TypeSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLMethod.java,JRefactory v2.6.24,Adapter,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPrimarySuffix.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/print/PrintingThread.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/jpg/SaveAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/RemoveMethodVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/summary/TypeSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTVariableDeclaratorId.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/type/RenameTypeVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTConditionalAndExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTForUpdate.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/TypeDeclSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTFormalParameters.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/command/CommandLineMenu.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTCompilationUnit.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTStatementExpressionList.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/query/ChildClassSearcher.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTConstructorDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLMouseAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPackageDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/TraversalVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTAdditiveExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTWhileStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTResultType.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTInclusiveOrExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTNestedClassDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTTryStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTArrayInitializer.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTConditionalExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTLiteral.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLLine.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/refactor/field/RemoveFieldVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/summary/SummaryVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTMethodDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTRelationalExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ChildrenVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/ide/common/ClassListPanel.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/line/LineMouseAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/tools/stub/StubPrintVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/ConvertAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/common/UndoAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTNestedInterfaceDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTForStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPrimaryPrefix.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/MessageSendSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTName.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTUnmodifiedInterfaceDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTEmptyStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/FieldSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTBooleanLiteral.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTBlockStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/line/EndPointPanel.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTForInit.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/field/RenameSystemTraversal.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTArguments.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTContinueStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTVariableDeclarator.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTThrowStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/FindLocalVariableDeclVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTUnmodifiedClassDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/RemoveMethodFromSubclassVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/summary/SummaryLoadVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTNameList.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTStatementExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTConditionalOrExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTArgumentList.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTAssignmentOperator.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/awt/OrderableListModel.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTSwitchStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLPopupMenu.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/Summary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/NearMissVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/uml/UMLField.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/uml/line/LinedPanel.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/AddMethodTypeVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTMethodDeclarator.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/TypeSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTInterfaceDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/jpg/Save.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/print/PrintAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTUnaryExpressionNotPlusMinus.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/JavaParserVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTVariableInitializer.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/refactor/SignatureUpdateAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTBreakStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/awt/OrderableList.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/common/JumpToTypeAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPostfixExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/type/RemoveClassVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/LocalVariableSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTEqualityExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTMethodDeclarationLookahead.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/print/PrintSetupAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTTypeDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTLocalVariableDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/pretty/SpecialTokenVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/pretty/PrettyPrintVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/summary/ImportSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/PackageSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/pretty/PrettyPrintVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/uml/line/DragPanelAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/FieldAccessSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/pretty/PrettyPrintVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/pretty/PrettyPrintVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/refactor/ExtractMethodDialog.java,JRefactory v2.6.24,Facade,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTCastLookahead.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTCastExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/ide/command/ZoomAdapter.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/EliminatePackageImportVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTExclusiveOrExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/LineCountVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPrimaryExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTAllocationExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTNullLiteral.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/method/MoveMethodVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTInterfaceBody.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTIfStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTAndExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTClassBodyDeclaration.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPrimitiveType.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/build/BuildExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/summary/MethodSummary.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/undo/UndoAction.java,JRefactory v2.6.24,Adapter,0
+JRefactory v2.6.24/src/org/acm/seguin/uml/print/UMLPagePrinter.java,JRefactory v2.6.24,Adapter,1
+JRefactory v2.6.24/src/org/acm/seguin/refactor/type/RenameClassVisitor.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTUnaryExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPreIncrementExpression.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTLabeledStatement.java,JRefactory v2.6.24,Visitor,0
+JRefactory v2.6.24/src/org/acm/seguin/refactor/type/RenameParentVisitor.java,JRefactory v2.6.24,Visitor,1
+JRefactory v2.6.24/src/org/acm/seguin/parser/ast/ASTPreDecrementExpression.java,JRefactory v2.6.24,Visitor,0
+JUnit v3.7/src/junit/swingui/TestRunner.java,JUnit v3.7,Observer,0
+JUnit v3.7/src/junit/framework/TestResult.java,JUnit v3.7,Observer,1
+JUnit v3.7/src/junit/swingui/TestTreeModel.java,JUnit v3.7,Observer,0
+JUnit v3.7/src/junit/swingui/TestSuitePanel.java,JUnit v3.7,Observer,0
+JavaDesignPatternExercises/TextEditor/ISubject.java,JavaDesignPatternExercises,Observer,0
+JavaDesignPatternExercises/src/TextEditor/Insert.java,JavaDesignPatternExercises,Observer,0
+JavaDesignPatternExercises/src/TextEditor/IBuffer.java,JavaDesignPatternExercises,None,0
+JavaDesignPatternExercises/TextEditor/GUI.java,JavaDesignPatternExercises,Observer,0
+Juzzle/src/org/game/Juzzle/PuzzlePaint.java,Juzzle,Adapter,0
+Juzzle/src/org/game/Juzzle/JuzzlePanel.java,Juzzle,Facade,1
+LoL-Chat/src/com/rei/lolchat/service/XmppFacade.java,LoL-Chat,Facade,1
+LoL-Chat/gen/com/rei/lolchat/service/aidl/IXmppFacade.java,LoL-Chat,Facade,0
+Log4J v1.2.1/src/java/org/apache/log4j/Hierarchy.java,Log4J v1.2.1,Observer,1
+Log4J v1.2.1/src/java/org/apache/log4j/LogManager.java,Log4J v1.2.1,Facade,1
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/android/adapters/TroopAdapter.java,Lord-of-Ultima-Manager,Adapter,0
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/android/adapters/TradeAdapter.java,Lord-of-Ultima-Manager,Adapter,0
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/android/adapters/TradeRequestAdapter.java,Lord-of-Ultima-Manager,Adapter,0
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/net/commands/responses/poll/PlayerCity.java,Lord-of-Ultima-Manager,None,0
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/android/adapters/SessionAdapter.java,Lord-of-Ultima-Manager,Adapter,0
+Lord-of-Ultima-Manager/src/com/avalutions/lou/manager/android/adapters/CityAdapter.java,Lord-of-Ultima-Manager,Adapter,0
+Lucene v2.3.1/contrib/memory/src/java/org/apache/lucene/index/memory/MemoryIndex.java,Lucene v2.3.1,Facade,1
+Lucene v2.3.1/src/java/org/apache/lucene/index/IndexReader.java,Lucene v2.3.1,FactoryMethod,1
+Lucene v2.3.1/src/java/org/apache/lucene/index/IndexWriter.java,Lucene v2.3.1,Facade,1
+MapperXML v1.9.7/src/com/taursys/xml/TextField.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/xml/ComponentFactory.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/xml/Form.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/html/HTMLSelect.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/debug/LoggerAdapter.java,MapperXML v1.9.7,Adapter,0
+MapperXML v1.9.7/src/com/taursys/debug/Debug.java,MapperXML v1.9.7,Adapter,0
+MapperXML v1.9.7/src/com/taursys/html/HTMLCheckBox.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/servlet/ServletForm.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/debug/SimpleLogger.java,MapperXML v1.9.7,Adapter,0
+MapperXML v1.9.7/src/com/taursys/dom/DocumentAdapter.java,MapperXML v1.9.7,Adapter,0
+MapperXML v1.9.7/src/com/taursys/html/test/HTMLComponentFactoryTest.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/xml/CheckboxField.java,MapperXML v1.9.7,Observer,0
+MapperXML v1.9.7/src/com/taursys/xml/event/RenderListener.java,MapperXML v1.9.7,Observer,0
+MapperXML v1.9.7/src/com/taursys/xml/TextField.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/xml/Template.java,MapperXML v1.9.7,FactoryMethod,0
+MapperXML v1.9.7/src/com/taursys/xml/event/RecycleListener.java,MapperXML v1.9.7,Observer,0
+MapperXML v1.9.7/src/com/taursys/servlet/ServletParameterDispatcher.java,MapperXML v1.9.7,Facade,1
+MapperXML v1.9.7/src/com/taursys/html/HTMLComponentFactory.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/xml/event/TriggerListener.java,MapperXML v1.9.7,Observer,0
+MapperXML v1.9.7/src/com/taursys/xml/SelectField.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/xml/TextField.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/xml/TextField.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/servlet/ServletInputDispatcher.java,MapperXML v1.9.7,Facade,1
+MapperXML v1.9.7/src/com/taursys/servlet/test/ServletTriggerDispatcherTest.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/xml/Parameter.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/servlet/DefaultMessageForm.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/xml/event/ParameterListener.java,MapperXML v1.9.7,Observer,0
+MapperXML v1.9.7/src/com/taursys/xml/DispatchingContainer.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/xml/event/RecycleDispatcher.java,MapperXML v1.9.7,Facade,0
+MapperXML v1.9.7/src/com/taursys/xml/event/RenderDispatcher.java,MapperXML v1.9.7,Facade,0
+MapperXML v1.9.7/src/com/taursys/xml/Template.java,MapperXML v1.9.7,AbstractFactory,0
+MapperXML v1.9.7/src/com/taursys/servlet/ServletTriggerDispatcher.java,MapperXML v1.9.7,Facade,1
+MapperXML v1.9.7/src/com/taursys/xml/DocumentElement.java,MapperXML v1.9.7,AbstractFactory,1
+MapperXML v1.9.7/src/com/taursys/dom/DOM_1_20000929_DocumentAdapter.java,MapperXML v1.9.7,Adapter,1
+MapperXML v1.9.7/src/com/taursys/servlet/HttpMultiPartServletRequest.java,MapperXML v1.9.7,Facade,0
+MapperXML v1.9.7/src/com/taursys/xml/DispatchingContainer.java,MapperXML v1.9.7,AbstractFactory,1
+Nutch v0.4/src/net/nutch/io/WritableComparable.java,Nutch v0.4,None,1
+Nutch v0.4/src/net/nutch/pagedb/FetchListEntry.java,Nutch v0.4,Adapter,0
+Nutch v0.4/src/net/nutch/db/WebDBInjector.java,Nutch v0.4,Facade,0
+Nutch v0.4/src/net/nutch/fetcher/FetcherOutput.java,Nutch v0.4,Facade,1
+Nutch v0.4/src/net/nutch/fetcher/Fetcher.java,Nutch v0.4,Facade,1
+OneSwarm/oneswarm_gwt_ui/gwt_incubator_minimal/com/google/gwt/libideas/resources/client/impl/ImageResourcePrototype.java,OneSwarm,None,1
+OneSwarm/oneswarm_gwt_ui/gwt_incubator_minimal/com/google/gwt/libideas/resources/client/ResourcePrototype.java,OneSwarm,None,0
+OneSwarm/az_src/src/com/aelitis/azureus/core/dht/router/impl/DHTRouterImpl.java,OneSwarm,Observer,1
+OpenJMail v1.0.9/src/net/larsan/email/pop/POPRetriever.java,OpenJMail v1.0.9,Facade,1
+OpenSIG/OpenSigCore/src/br/com/opensig/core/client/visao/abstrato/ANavegacao.java,OpenSIG,Visitor,0
+OpenSIG/OpenSigCore/src/br/com/opensig/core/client/visao/NavegacaoLista.java,OpenSIG,Visitor,0
+PADL/src/padl/kernel/IMethod.java,PADL,None,0
+PADL/src/padl/util/adapter/ClassAdapter.java,PADL,Adapter,1
+PADL/src/padl/util/adapter/WalkerAdapter.java,PADL,Adapter,0
+PADL Creator ClassFile/src/padl/creator/util/CadinalityOneAccessorsData.java,PADL Creator ClassFile,Adapter,0
+PADL Creator ClassFile/src/padl/creator/relationship/RelationshipAnalyzer.java,PADL Creator ClassFile,Facade,1
+PADL Creator ClassFile/src/padl/creator/AbstractClassFileCreator.java,PADL Creator ClassFile,FactoryMethod,0
+PADL Statements Creator AOL/src/padl/statement/creator/aol/helper/LOCAdder.java,PADL Statements Creator AOL,Visitor,0
+PADL Statements Creator AOL/src/padl/statement/creator/aol/ModelAnnotator.java,PADL Statements Creator AOL,FactoryMethod,1
+PCGen v5.6.1/java/pcgen/gui/utils/TreeTableModelAdapter.java,PCGen v5.6.1,Adapter,1
+PCGen v5.6.1/java/pcgen/gui/utils/ShowMessageGuiObserver.java,PCGen v5.6.1,Observer,0
+PCGen v5.6.1/java/pcgen/gui/utils/GuiFacade.java,PCGen v5.6.1,Facade,1
+PMD v1.8/src/net/sourceforge/pmd/PMD.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/Rule.java,PMD v1.8,Adapter,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/gui/MainFrame.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/gui/EvaluationResultsPanel.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/RuleSetFactory.java,PMD v1.8,FactoryMethod,1
+PMD v1.8/src/net/sourceforge/pmd/cpd/CPPTokenizer.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/PMD.java,PMD v1.8,Facade,0
+PMD v1.8/src/net/sourceforge/pmd/PMD.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/symboltable/MethodScope.java,PMD v1.8,FactoryMethod,1
+PMD v1.8/src/net/sourceforge/pmd/symboltable/GlobalScope.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/ast/ASTCompilationUnit.java,PMD v1.8,None,0
+PMD v1.8/src/test/net/sourceforge/pmd/ReportTest.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/model/ViewerModelListener.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/symboltable/LocalScope.java,PMD v1.8,FactoryMethod,1
+PMD v1.8/src/net/sourceforge/pmd/Report.java,PMD v1.8,Observer,1
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/model/ViewerModel.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/symboltable/SymbolFacade.java,PMD v1.8,Facade,0
+PMD v1.8/src/net/sourceforge/pmd/symboltable/BasicScopeFactory.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/gui/XPathPanel.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/ant/PMDTask.java,PMD v1.8,Adapter,0
+PMD v1.8/src/net/sourceforge/pmd/ast/SimpleNode.java,PMD v1.8,Visitor,0
+PMD v1.8/src/net/sourceforge/pmd/AbstractRule.java,PMD v1.8,Adapter,0
+PMD v1.8/src/net/sourceforge/pmd/ReportListener.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/symboltable/SymbolFacade.java,PMD v1.8,FactoryMethod,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/gui/ASTPanel.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/cpd/cppast/SymtabManager.java,PMD v1.8,FactoryMethod,1
+PMD v1.8/src/net/sourceforge/pmd/Report.java,PMD v1.8,Observer,1
+PMD v1.8/src/net/sourceforge/pmd/ast/JavaParserVisitorAdapter.java,PMD v1.8,Adapter,0
+PMD v1.8/src/net/sourceforge/pmd/util/viewer/gui/SourceCodePanel.java,PMD v1.8,Observer,0
+PMD v1.8/src/net/sourceforge/pmd/ast/ASTVariableDeclaratorId.java,PMD v1.8,Visitor,0
+PMD v1.8/src/net/sourceforge/pmd/ast/JavaParserVisitor.java,PMD v1.8,Visitor,1
+POM/src/pom/metrics/impl/AbstractMetric.java,POM,Facade,0
+POM/src/pom/metrics/impl/AbstractMetric.java,POM,FactoryMethod,0
+Pooka v2.0/src/net/suberic/pooka/StartupManager.java,Pooka v2.0,Facade,1
+Pooka v2.0/src/net/suberic/pooka/thread/MessageLoader.java,Pooka v2.0,Observer,0
+Pooka v2.0/src/net/suberic/util/gui/propedit/PropertyEditorFactory.java,Pooka v2.0,FactoryMethod,1
+QuickUML 2001/src/uml/diagram/ClassRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/tool/AbstractTool.java,QuickUML 2001,Observer,0
+QuickUML 2001/src/uml/diagram/NoteRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/Diagram.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/uml/diagram/InterfaceRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultFigureRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/Diagram.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultFigureEditor.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/tool/ToolListener.java,QuickUML 2001,Observer,0
+QuickUML 2001/src/uml/diagram/CompositionLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/uml/diagram/GeneralizationLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DefaultLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/diagram/DiagramUI.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/uml/diagram/RealizationLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/uml/diagram/AssociationLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+QuickUML 2001/src/uml/diagram/DependencyLinkRenderer.java,QuickUML 2001,AbstractFactory,0
+Rhino Common/src/org/mozilla/javascript/tools/debugger/TreeTableModelAdapter.java,Rhino Common,Adapter,1
+Rhino Common/src/org/mozilla/javascript/tools/debugger/JTreeTable.java,Rhino Common,Facade,0
+Rhino Common/src/org/mozilla/javascript/tools/debugger/downloaded/TreeTableExample2.java,Rhino Common,Observer,0
+SADPJ/src/src/ADAPTER/cls/AddressValidator.java,SADPJ,Adapter,0
+SADPJ/src/src/VISITOR/OrderVisitor.java,SADPJ,Visitor,1
+SADPJ/src/src/MEMENTO/Customer.java,SADPJ,Adapter,0
+SADPJ/src/src/VISITOR/NonCaliforniaOrder.java,SADPJ,Visitor,0
+SADPJ/src/src/SINGLETON/LoggerTest.java,SADPJ,FactoryMethod,0
+SADPJ/src/src/OBSERVER/MonthlyReport.java,SADPJ,Observer,0
+SADPJ/src/src/ADAPTER/cls/CAAddress.java,SADPJ,Adapter,0
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/AbstractFactory/LuxuryVehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/ADAPTER/cls/AddressManager.java,SADPJ,Adapter,1
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/VISITOR/CaliforniaOrder.java,SADPJ,Visitor,0
+SADPJ/src/src/FAÇADE/server/Account.java,SADPJ,Facade,0
+SADPJ/src/src/OBSERVER/Observer.java,SADPJ,Observer,0
+SADPJ/src/src/VISITOR/OverseasOrder.java,SADPJ,Visitor,0
+SADPJ/src/src/OBSERVER/ReportManager.java,SADPJ,Observer,1
+SADPJ/src/src/OBSERVER/YTDChart.java,SADPJ,Observer,0
+SADPJ/src/src/AbstractFactory/NonLuxuryVehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/OBSERVER/MonthlyReport.java,SADPJ,Observer,0
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/AbstractFactory/AutoSearchUI.java,SADPJ,AbstractFactory,0
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/FAÇADE/server/CustomerFacade.java,SADPJ,Facade,1
+SADPJ/src/src/ADAPTER/cls/CAAddressAdapter.java,SADPJ,Adapter,0
+SADPJ/src/src/DECORATOR/LoggerFactory.java,SADPJ,FactoryMethod,1
+SADPJ/src/src/AbstractFactory/VehicleFactory.java,SADPJ,AbstractFactory,1
+SADPJ/src/src/BRIDGE/FileLogger.java,SADPJ,FactoryMethod,0
+SADPJ/src/src/BRIDGE/Client.java,SADPJ,FactoryMethod,0
+SADPJ/src/src/FAÇADE/server/CreditCard.java,SADPJ,Facade,0
+SIP Communicator v1.0-draft/src/net/java/sip/communicator/impl/media/MediaServiceImpl.java,SIP Communicator v1.0-draft,Facade,1
+SIP Communicator v1.0-draft/src/net/java/sip/communicator/service/protocol/Call.java,SIP Communicator v1.0-draft,Observer,1
+SIP Communicator v1.0-draft/src/net/java/sip/communicator/service/protocol/ProtocolProviderFactory.java,SIP Communicator v1.0-draft,FactoryMethod,1
+SamyGo-Android-Remote/src/de/quist/app/samyGoRemote/SenderFactory.java,SamyGo-Android-Remote,FactoryMethod,0
+SmartBIPrototype/src/com/dblab/client/gin/ClientGinjector.java,SmartBIPrototype,None,1
+Synapse M1/samples/deprecation_mediator/src/sampleMediators/deprecation/DeprecationMediator.java,Synapse M1,FactoryMethod,0
+Synapse M1/samples/deprecation_mediator/src/sampleMediators/deprecation/DeprecationMediator.java,Synapse M1,Facade,0
+Synapse M1/samples/src/samples/userguide/StockQuoteXMLHandler.java,Synapse M1,Facade,0
+Synapse v2.0.0/samples/axis2Client/src/samples/mediators/DiscountQuoteMediator.java,Synapse v2.0.0,Facade,0
+Synapse v2.0.0/samples/axis2Client/src/samples/common/StockQuoteHandler.java,Synapse v2.0.0,Facade,0
+Synapse v2.0.0/samples/axis2Server/src/FastStockQuoteService/src/samples/services/GetQuoteResponse.java,Synapse v2.0.0,None,0
+Synapse v2.0.0/samples/axis2Server/src/ReliableStockQuoteService/src/samples/services/PlaceOrder.java,Synapse v2.0.0,None,0
+Synapse v2.0.0/samples/axis2Server/src/SimpleStockQuoteService/src/samples/services/SimpleStockQuoteService.java,Synapse v2.0.0,Facade,0
+Trove/src/gnu/trove/TFloatFloatProcedure.java,Trove,None,0
+Trove/src/gnu/trove/decorator/TDoubleHashSetDecorator.java,Trove,Facade,0
+Trove/src/gnu/trove/decorator/TByteHashSetDecorator.java,Trove,Facade,0
+Trove/src/gnu/trove/decorator/TFloatHashSetDecorator.java,Trove,Facade,0
+Trove/src/gnu/trove/TIntLongProcedure.java,Trove,None,0
+Trove/src/gnu/trove/TIntDoubleProcedure.java,Trove,None,0
+Trove/src/gnu/trove/decorator/TIntHashSetDecorator.java,Trove,Facade,0
+TurtlePlayer/src/turtle/player/playlist/Playlist.java,TurtlePlayer,Observer,1
+TurtlePlayer/src/turtle/player/preferences/Key.java,TurtlePlayer,None,0
+TurtlePlayer/src/turtle/player/preferences/PreferencesObserver.java,TurtlePlayer,Observer,0
+UK-Ejemplos/src/kennedy/ar/ui/texteditor/EventObserver.java,UK-Ejemplos,Observer,0
+UK-Ejemplos/src/kennedy/ar/ui/texteditor/AcceptButton.java,UK-Ejemplos,Observer,0
+UK-Ejemplos/src/kennedy/ar/banco/Sucursal.java,UK-Ejemplos,Observer,1
+UK-Ejemplos/src/kennedy/ar/ui/texteditor/AcceptButton.java,UK-Ejemplos,Observer,0
+UK-Ejemplos/src/kennedy/ar/banco/TrxManager.java,UK-Ejemplos,Observer,1
+Velocity v1.7/src/java/org/apache/velocity/context/InternalContextAdapterImpl.java,Velocity v1.7,Visitor,0
+Velocity v1.7/src/java/org/apache/velocity/context/InternalContextAdapterImpl.java,Velocity v1.7,Adapter,0
+Velocity v1.7/src/java/org/apache/velocity/runtime/RuntimeSingleton.java,Velocity v1.7,Facade,0
+Xalan v2.7.0/src/org/apache/xalan/xsltc/dom/DOMAdapter.java,Xalan v2.7.0,Adapter,1
+Xalan v2.7.0/src/org/apache/xpath/objects/XObjectFactory.java,Xalan v2.7.0,FactoryMethod,1
+Xalan v2.7.0/src/org/apache/xalan/templates/VarNameCollector.java,Xalan v2.7.0,Visitor,1
+Xerces v2.9.0/src/org/apache/xml/serialize/Serializer.java,Xerces v2.9.0,None,1
+Xerces v2.9.0/src/org/apache/xml/serialize/SerializerFactory.java,Xerces v2.9.0,FactoryMethod,0
+Xerces v2.9.0/src/org/apache/xerces/util/EntityResolverWrapper.java,Xerces v2.9.0,Adapter,0
+Xerces v2.9.0/src/org/apache/xerces/xni/grammars/XMLGrammarDescription.java,Xerces v2.9.0,None,0
+Xerces v2.9.0/src/org/apache/xerces/xni/XMLResourceIdentifier.java,Xerces v2.9.0,None,0
+accent/src/main/java/net/lshift/accent/ChannelListenerAdapter.java,accent,Adapter,0
+accent/src/main/java/net/lshift/accent/ChannelCallback.java,accent,None,0
+activemq/activemq-web/src/main/java/org/apache/activemq/web/DurableSubscriberFacade.java,activemq,Facade,0
+activemq/activemq-web/src/main/java/org/apache/activemq/web/SingletonBrokerFacade.java,activemq,Facade,0
+activemq/activemq-core/src/main/java/org/apache/activemq/store/kahadb/KahaDBStore.java,activemq,Facade,1
+activemq/activemq-web/src/main/java/org/apache/activemq/web/RemoteJMXBrokerFacade.java,activemq,Facade,1
+activemq/activemq-core/src/main/java/org/apache/activemq/kaha/impl/async/JournalFacade.java,activemq,Facade,1
+activemq/activemq-web/src/main/java/org/apache/activemq/web/LocalBrokerFacade.java,activemq,Facade,1
+activemq/activemq-web/src/main/java/org/apache/activemq/web/BrokerFacadeSupport.java,activemq,Facade,1
+activemq/activemq-core/src/main/java/org/apache/activemq/broker/jmx/QueueViewMBean.java,activemq,None,0
+activemq/activemq-core/src/main/java/org/apache/activemq/kaha/impl/async/DataManagerFacade.java,activemq,Facade,1
+ant/src/main/org/apache/tools/ant/taskdefs/optional/extension/ExtensionAdapter.java,ant,Adapter,0
+ant/src/main/org/apache/tools/ant/taskdefs/optional/jdepend/JDependTask.java,ant,Observer,0
+ant/src/main/org/apache/tools/ant/taskdefs/rmic/DefaultRmicAdapter.java,ant,Adapter,1
+ant/src/main/org/apache/tools/ant/TaskAdapter.java,ant,Adapter,1
+ant/src/main/org/apache/tools/ant/TypeAdapter.java,ant,Adapter,0
+ant/src/main/org/apache/tools/ant/taskdefs/optional/jsp/compilers/JspCompilerAdapter.java,ant,Adapter,0
+ant/src/main/org/apache/tools/ant/types/ResourceFactory.java,ant,FactoryMethod,0
+ant/src/main/org/apache/tools/ant/taskdefs/rmic/RmicAdapter.java,ant,Adapter,0
+ant/src/main/org/apache/tools/ant/taskdefs/optional/native2ascii/Native2AsciiAdapter.java,ant,Adapter,0
+api/weld-spi/src/main/java/org/jboss/weld/injection/spi/helpers/AbstractResourceServices.java,api,FactoryMethod,1
+api/weld-spi/src/test/java/org/jboss/weld/bootstrap/api/test/MockResourceFactory.java,api,FactoryMethod,0
+archaius/archaius-core/src/main/java/com/netflix/config/AbstractDynamicPropertyListener.java,archaius,Adapter,1
+argouml-0.32/src/org/argouml/uml/diagram/DiagramFactory.java,argouml-0.32,FactoryMethod,1
+argouml-0.32/src/org/argouml/kernel/ProjectManager.java,argouml-0.32,Facade,1
+argouml-0.32/src/org/argouml/uml/ui/UMLModelElementTaggedValueProxy.java,argouml-0.32,Adapter,1
+arquillian-extension-persistence/impl/src/main/java/org/jboss/arquillian/persistence/core/event/AfterPersistenceTest.java,arquillian-extension-persistence,None,0
+arquillian-extension-persistence/int-tests-testng/src/test/java/org/jboss/arquillian/integration/persistence/testextension/event/EventObserver.java,arquillian-extension-persistence,Observer,0
+arquillian-extension-persistence/int-tests/src/test/java/org/jboss/arquillian/integration/persistence/testextension/event/EventObserver.java,arquillian-extension-persistence,Observer,0
+arquillian_deprecated/impl-base/src/main/java/org/jboss/arquillian/impl/core/ObserverImpl.java,arquillian_deprecated,Observer,0
+betterFORM/web/src/main/java/de/betterform/agent/web/flux/FluxFacade.java,betterFORM,Facade,1
+biojava-legacy/core/src/main/java/org/biojava/utils/net/URLFactory.java,biojava-legacy,FactoryMethod,0
+biojava-legacy/core/src/main/java/org/biojava/bio/seq/io/SeqIOTools.java,biojava-legacy,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/dnd/resources/SelectionDropTargetManager.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/dnd/resources/ResourceSetPresenterDropCommandFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/svg/javascript_renderer/SvgWidget.java,biomixer,FactoryMethod,0
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/ResourceSetAvatarFactory.java,biomixer,FactoryMethod,0
+biomixer/src/org/thechiselgroup/biomixer/client/svg/javascript_renderer/SvgWidget.java,biomixer,FactoryMethod,0
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/HideIfEmptyResourceSetAvatarFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/HighlightingResourceSetAvatarFactory.java,biomixer,FactoryMethod,0
+biomixer/src/org/thechiselgroup/biomixer/client/services/NcboRestUrlBuilderFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/DisableIfEmptyResourceSetAvatarFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/services/NcboJsonpRestUrlBuilderFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/workbench/ui/configuration/ViewWindowContentProducer.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/UpdateResourceSetAvatarLabelFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/shared/svg/text_renderer/TextSvgElementFactory.java,biomixer,FactoryMethod,1
+biomixer/src/org/thechiselgroup/biomixer/client/core/resources/ui/FixedLabelResourceSetAvatarFactory.java,biomixer,FactoryMethod,0
+brightroom/src/main/java/com/btrll/rooms/client/AppHistoryObserver.java,brightroom,Observer,0
+cayenne/modeler/cayenne-modeler/src/main/java/org/apache/cayenne/modeler/dialog/objentity/ObjRelationshipInfo.java,cayenne,AbstractFactory,0
+cayenne/modeler/cayenne-modeler/src/main/java/org/apache/cayenne/modeler/util/DefaultWidgetFactory.java,cayenne,AbstractFactory,0
+cayenne/modeler/cayenne-modeler/src/main/java/org/apache/cayenne/swing/components/textpane/TextPaneViewFactory.java,cayenne,FactoryMethod,0
+ccw/ccw.core/src/java/ccw/ClojureCore.java,ccw,Facade,1
+ccw/ccw.debug/src/ccw/debug/ClojureLineBreakpointAdapter.java,ccw,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/templatecompiler/model/NormalizedStringAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/AdapterBase.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/BehaviorRendererAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/RendererAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/templatecompiler/el/ELVisitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/ValidatorAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/ElementAdapterBase.java,cdk,Adapter,1
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/FacetAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/EventAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/templatecompiler/RendererClassVisitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/generate/java/taghandler/TagHandlerGeneratorVisitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/model/Visitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/templatecompiler/model/TemplateVisitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/generate/taglib/TaglibGeneratorVisitor.java,cdk,Visitor,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/BehaviorAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/ComponentAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/FileManager.java,cdk,None,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/ConverterAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/model/SimpleVisitor.java,cdk,Visitor,1
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/ClassAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/PropertyAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/FacesConfigAdapter.java,cdk,Adapter,0
+cdk/generator/src/main/java/org/richfaces/cdk/xmlconfig/model/AttributeAdapter.java,cdk,Adapter,0
+cdo/plugins/org.eclipse.net4j.util/src/org/eclipse/net4j/util/io/IOVisitor.java,cdo,Visitor,0
+cdo/plugins/org.eclipse.net4j.db.h2/src/org/eclipse/net4j/db/h2/H2Adapter.java,cdo,Adapter,0
+cdo/plugins/org.eclipse.emf.cdo.defs/src/org/eclipse/emf/cdo/defs/CDODefsFactory.java,cdo,AbstractFactory,0
+cdo/plugins/org.eclipse.net4j.db.derby/src/org/eclipse/net4j/db/derby/EmbeddedDerbyAdapter.java,cdo,Adapter,0
+cdo/plugins/org.eclipse.net4j.db/src/org/eclipse/net4j/spi/db/DBAdapter.java,cdo,Facade,1
+cdo/plugins/org.eclipse.emf.cdo.common/src/org/eclipse/emf/cdo/common/revision/delta/CDOFeatureDeltaVisitor.java,cdo,Visitor,1
+cdo/plugins/org.eclipse.emf.cdo.common/src/org/eclipse/emf/cdo/spi/common/revision/CDOFeatureDeltaVisitorImpl.java,cdo,Visitor,1
+cdo/plugins/org.eclipse.emf.cdo.defs/src/org/eclipse/emf/cdo/defs/impl/CDODefsFactoryImpl.java,cdo,AbstractFactory,1
+cdo/plugins/org.eclipse.net4j.db.hsqldb/src/org/eclipse/net4j/db/hsqldb/HSQLDBAdapter.java,cdo,Adapter,0
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/actions/WorkbenchRunnableAdapter.java,cdt,Adapter,0
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/refactoring/DocumentAdapter.java,cdt,Facade,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/cpp/semantics/CPPSemantics.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/parser/CodeReaderAdapter.java,cdt,Adapter,0
+cdt/core/org.eclipse.cdt.core/src/org/eclipse/cdt/internal/formatter/CodeFormatterVisitor.java,cdt,Visitor,1
+cdt/debug/org.eclipse.cdt.debug.mi.core/src/org/eclipse/cdt/debug/mi/core/MITTYAdapter.java,cdt,Adapter,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/pdom/indexer/IndexerASTVisitor.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/DeferredCWorkbenchAdapter.java,cdt,Adapter,1
+cdt/core/org.eclipse.cdt.core/utils/org/eclipse/cdt/utils/BinaryObjectAdapter.java,cdt,Adapter,0
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/CWorkbenchAdapter.java,cdt,Adapter,0
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/c/CVisitor.java,cdt,Visitor,0
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/editor/DocumentAdapter.java,cdt,Facade,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/cpp/semantics/CPPSemantics.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/buildconsole/MultiBuildConsoleAdapter.java,cdt,Adapter,1
+cdt/core/org.eclipse.cdt.core/model/org/eclipse/cdt/core/settings/model/util/IPathSettingsContainerVisitor.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/compare/CStructureCreatorVisitor.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/cpp/semantics/CPPSemantics.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.ui/src/org/eclipse/cdt/internal/ui/dnd/BasicSelectionTransferDragAdapter.java,cdt,Adapter,0
+cdt/testsrunner/org.eclipse.cdt.testsrunner/src/org/eclipse/cdt/testsrunner/internal/ui/view/actions/OpenInEditorAction.java,cdt,Visitor,0
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/cpp/semantics/CPPSemantics.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/parser/cpp/semantics/CPPSemantics.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/dom/rewrite/changegenerator/ChangeGeneratorWriterVisitor.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/model/org/eclipse/cdt/core/model/ICElementVisitor.java,cdt,Visitor,1
+cdt/core/org.eclipse.cdt.core/parser/org/eclipse/cdt/internal/core/pdom/indexer/ProjectIndexerInputAdapter.java,cdt,Facade,1
+com.happyprog.tdgotchi/src/com/happyprog/tdgotchi/subscriber/JUnitTestSubscriber.java,com.happyprog.tdgotchi,Observer,0
+com.happyprog.tdgotchi/src/com/happyprog/tdgotchi/subscriber/TinyRefactoringSubscriber.java,com.happyprog.tdgotchi,Observer,0
+cucumber-jvm/core/src/main/java/cucumber/runtime/io/FileResourceIteratorFactory.java,cucumber-jvm,FactoryMethod,0
+cucumber-jvm/core/src/main/java/cucumber/runtime/io/ZipThenFileResourceIteratorFallback.java,cucumber-jvm,FactoryMethod,0
+cucumber-jvm/core/src/main/java/cucumber/runtime/io/ZipResourceIteratorFactory.java,cucumber-jvm,FactoryMethod,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ParamTypeSpecVisitor.java,cxf,Visitor,0
+cxf/rt/frontend/jaxrs/src/main/java/org/apache/cxf/jaxrs/client/ClientMessageObserver.java,cxf,Observer,0
+cxf/api/src/main/java/org/apache/cxf/transport/MultipleEndpointObserver.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/PortTypeVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/OperationVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/DefinitionVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/SequenceVisitor.java,cxf,Visitor,0
+cxf/api/src/main/java/org/apache/cxf/interceptor/AbstractFaultChainInitiatorObserver.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ModuleVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ArrayVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ParamDclVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/TemplateTypeSpecVisitor.java,cxf,Visitor,0
+cxf/api/src/main/java/org/apache/cxf/interceptor/ClientOutFaultObserver.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ObjectReferenceVisitor.java,cxf,Visitor,1
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/StringVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ExceptionVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/SimpleTypeSpecVisitor.java,cxf,Visitor,0
+cxf/rt/bindings/coloc/src/main/java/org/apache/cxf/binding/coloc/ColocMessageObserver.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/FixedVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/TypesVisitor.java,cxf,Visitor,0
+cxf/rt/ws/addr/src/main/java/org/apache/cxf/ws/addressing/impl/MAPAggregatorImpl.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ConstVisitor.java,cxf,Visitor,0
+cxf/api/src/main/java/org/apache/cxf/transport/ChainInitiationObserver.java,cxf,Observer,0
+cxf/rt/frontend/jaxws/src/test/java/org/apache/cxf/jaxws/MessageReplayObserver.java,cxf,Observer,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ConstrTypeSpecVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/ScopedNameVisitor.java,cxf,Visitor,0
+cxf/tools/corba/src/main/java/org/apache/cxf/tools/corba/processors/idl/TypedefVisitor.java,cxf,Visitor,0
+de-webapp/src/main/java/org/iplantc/de/client/services/TemplateServiceFacade.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/services/AnalysisServiceFacade.java,de-webapp,Facade,0
+de-webapp/src/main/java/org/iplantc/de/client/services/FileEditorServiceFacade.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/views/windows/DECatalogWindow.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/services/MessageServiceFacade.java,de-webapp,Facade,0
+de-webapp/src/main/java/org/iplantc/de/client/services/DiskResourceServiceFacade.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/views/panels/DataMainPanel.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/views/panels/ManageCollaboratorsPanel.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/views/panels/MyAnalysesPanel.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/services/UserSessionServiceFacade.java,de-webapp,Facade,0
+de-webapp/src/main/java/org/iplantc/de/client/utils/NotificationHelper.java,de-webapp,Facade,1
+de-webapp/src/main/java/org/iplantc/de/client/views/DesktopView.java,de-webapp,Facade,1
+dozer/core/src/test/java/org/dozer/vo/collections/UserGroup.java,dozer,None,0
+dozer/core/src/test/java/org/dozer/functional_tests/support/UserBeanFactory.java,dozer,FactoryMethod,0
+dozer/core/src/main/java/org/dozer/factory/ConstructionStrategies.java,dozer,FactoryMethod,0
+dozer/core/src/main/java/org/dozer/factory/JAXBBeanFactory.java,dozer,FactoryMethod,0
+dozer/core/src/main/java/org/dozer/factory/ConstructionStrategies.java,dozer,FactoryMethod,0
+dozer/core/src/test/java/org/dozer/functional_tests/support/SampleDefaultBeanFactory.java,dozer,FactoryMethod,0
+dto_config_models/src/config/AppConfig.java,dto_config_models,None,0
+dto_config_models/src/config/RetryPolicy.java,dto_config_models,None,0
+dto_config_models/src/config/VersionInfo.java,dto_config_models,None,0
+dto_config_models/src/config/HealthCheck.java,dto_config_models,None,0
+dto_io_models/src/io/PlainDto.java,dto_io_models,None,0
+dto_io_models/src/io/FileDigest.java,dto_io_models,None,0
+dto_io_models/src/io/ValidationError.java,dto_io_models,None,0
+dto_io_models/src/io/CsvRow.java,dto_io_models,None,0
+dto_metrics_models/src/metrics/MetricSnapshot.java,dto_metrics_models,None,0
+dto_metrics_models/src/metrics/AuditRecord.java,dto_metrics_models,None,0
+dto_metrics_models/src/metrics/JobStatus.java,dto_metrics_models,None,0
+dto_metrics_models/src/metrics/QuotaUsage.java,dto_metrics_models,None,0
+dto_paging_models/src/paging/DateRange.java,dto_paging_models,None,0
+dto_paging_models/src/paging/PageCursor.java,dto_paging_models,None,0
+dto_paging_models/src/paging/SortOrder.java,dto_paging_models,None,0
+dto_paging_models/src/paging/QueryFilter.java,dto_paging_models,None,0
+dto_profile_models/src/profile/EmailDraft.java,dto_profile_models,None,0
+dto_profile_models/src/profile/UserProfile.java,dto_profile_models,None,0
+dto_profile_models/src/profile/PhoneNumber.java,dto_profile_models,None,0
+dto_profile_models/src/profile/TokenPair.java,dto_profile_models,None,0
+dto_spatial_models/src/spatial/TimeWindow.java,dto_spatial_models,None,0
+dto_spatial_models/src/spatial/GeoPoint.java,dto_spatial_models,None,0
+dto_spatial_models/src/spatial/BoundingBox.java,dto_spatial_models,None,0
+dto_spatial_models/src/spatial/ColorRgb.java,dto_spatial_models,None,0
+emf.compare/plugins/org.eclipse.emf.compare/src/org/eclipse/emf/compare/match/DefaultComparisonFactory.java,emf.compare,FactoryMethod,0
+emf.compare/plugins/org.eclipse.emf.compare/src-gen/org/eclipse/emf/compare/CompareFactory.java,emf.compare,None,0
+emf.compare/plugins/org.eclipse.emf.compare/src-gen/org/eclipse/emf/compare/Match.java,emf.compare,None,1
+faban/driver/src/com/sun/faban/driver/transport/util/TimedSocketFactory.java,faban,FactoryMethod,1
+faban/harness/src/com/sun/faban/harness/engine/RunQ.java,faban,Facade,1
+faban/driver/src/com/sun/faban/driver/transport/util/TimedSocketWrapperFactory.java,faban,FactoryMethod,0
+faban/harness/src/com/sun/faban/harness/engine/GenericBenchmark.java,faban,Facade,1
+fafdtibb/src/fr/insarennes/fafdti/hadoop/fast/MapperTreeBuilder.java,fafdtibb,FactoryMethod,0
+fafdtibb/src/fr/insarennes/fafdti/builder/treebuilder/LimitModeTreeBuilderFactory.java,fafdtibb,FactoryMethod,0
+fafdtibb/src/fr/insarennes/fafdti/bagging/Launcher.java,fafdtibb,FactoryMethod,0
+graph-collections/src/main/java/org/neo4j/collections/rtree/RTreeIndex.java,graph-collections,Visitor,0
+graph-collections/src/main/java/org/neo4j/collections/rtree/SpatialIndexVisitor.java,graph-collections,Visitor,0
+gson/gson/src/main/java/com/google/gson/JsonSerializer.java,gson,None,0
+gson/proto/src/main/java/com/google/gson/protobuf/ProtoTypeAdapter.java,gson,Adapter,0
+harmony-classlib/modules/luni/src/main/java/java/util/Observable.java,harmony-classlib,Observer,1
+harmony-classlib/modules/luni/src/main/java/java/util/Observer.java,harmony-classlib,None,0
+hazelcast-cluster-monitor/src/main/java/com/hazelcast/monitor/client/MonitoringPanel.java,hazelcast-cluster-monitor,None,0
+hbase/hbase-hadoop-compat/src/main/java/org/apache/hadoop/hbase/thrift/metrics/ThriftServerMetricsSourceFactory.java,hbase,FactoryMethod,0
+hbase/hbase-hadoop1-compat/src/main/java/org/apache/hadoop/hbase/thrift/metrics/ThriftServerMetricsSourceFactoryImpl.java,hbase,FactoryMethod,0
+hbase/hbase-hadoop2-compat/src/main/java/org/apache/hadoop/hbase/thrift/metrics/ThriftServerMetricsSourceFactoryImpl.java,hbase,FactoryMethod,0
+hivedb/src/main/java/org/hivedb/Hive.java,hivedb,Facade,1
+hivedb/src/main/java/org/hivedb/Hive.java,hivedb,Facade,1
+iPage/src/main/java/com/github/zhongl/api/RangeIndexCodec.java,iPage,FactoryMethod,1
+iPage/src/main/java/com/github/zhongl/api/Snapshot.java,iPage,FactoryMethod,0
+infinitest/infinitest-eclipse/src/main/java/org/infinitest/eclipse/workspace/EclipseFacade.java,infinitest,Facade,0
+infinitest/infinitest-eclipse/src/main/java/org/infinitest/eclipse/workspace/ProjectFacade.java,infinitest,Facade,1
+infinitest/infinitest-eclipse/src/main/java/org/infinitest/eclipse/workspace/WorkspaceFacade.java,infinitest,Facade,0
+infinitest/infinitest-eclipse/src/main/java/org/infinitest/eclipse/workspace/EclipseWorkspace.java,infinitest,Facade,1
+intellij-community/platform/lang-impl/src/com/intellij/ide/projectView/impl/ProjectViewImpl.java,intellij-community,None,0
+intellij-community/java/java-psi-api/src/com/intellij/psi/codeStyle/JavaCodeStyleSettingsFacade.java,intellij-community,Facade,0
+intellij-community/platform/core-impl/src/com/intellij/psi/impl/file/impl/FileManagerImpl.java,intellij-community,Facade,0
+intellij-community/platform/lang-impl/src/com/intellij/psi/impl/source/codeStyle/CodeFormatterFacade.java,intellij-community,Facade,0
+intellij-community/platform/platform-api/src/com/intellij/codeStyle/CodeStyleFacade.java,intellij-community,Facade,0
+intellij-community/platform/core-impl/src/com/intellij/mock/MockFileIndexFacade.java,intellij-community,Facade,0
+intellij-community/java/java-psi-api/src/com/intellij/psi/JavaPsiFacade.java,intellij-community,Facade,0
+intellij-community/java/java-impl/src/com/intellij/codeInsight/completion/JavaCompletionUtil.java,intellij-community,Facade,0
+intellij-community/java/java-impl/src/com/intellij/psi/impl/migration/PsiMigrationImpl.java,intellij-community,Facade,0
+intellij-community/platform/platform-api/src/com/intellij/openapi/actionSystem/DataContext.java,intellij-community,None,0
+jabylon/de.jutzig.jabylon.users/src/main/java/de/jutzig/jabylon/users/impl/UsersFactoryImpl.java,jabylon,AbstractFactory,1
+jabylon/de.jutzig.jabylon.users/src/main/java/de/jutzig/jabylon/users/UsersFactory.java,jabylon,AbstractFactory,0
+jackrabbit/jackrabbit-core/src/main/java/org/apache/jackrabbit/core/security/authorization/AccessControlConstants.java,jackrabbit,None,1
+jackrabbit/jackrabbit-core/src/main/java/org/apache/jackrabbit/core/security/authorization/acl/CompiledPermissionsImpl.java,jackrabbit,Observer,0
+jackrabbit/jackrabbit-jcr-commons/src/main/java/org/apache/jackrabbit/commons/repository/RepositoryFactory.java,jackrabbit,FactoryMethod,0
+jackrabbit/jackrabbit-core/src/main/java/org/apache/jackrabbit/core/security/authorization/acl/EntryCollector.java,jackrabbit,Observer,0
+jackrabbit/jackrabbit-jcr-servlet/src/main/java/org/apache/jackrabbit/servlet/AbstractRepositoryServlet.java,jackrabbit,FactoryMethod,0
+jakarta-log4j-1.2.8/src/org/apache/log4j/Hierarchy.java,jakarta-log4j-1.2.8,Observer,1
+jakarta-log4j-1.2.8/src/org/apache/log4j/DefaultCategoryFactory.java,jakarta-log4j-1.2.8,FactoryMethod,1
+jakarta-log4j-1.2.8/src/org/apache/log4j/LogManager.java,jakarta-log4j-1.2.8,Facade,1
+jakarta-struts-1.2.4-src/share/org/apache/struts/upload/MultipartRequestWrapper.java,jakarta-struts-1.2.4-src,Adapter,0
+jakarta-struts-1.2.4-src/share/org/apache/struts/tiles/definition/ComponentDefinitionsFactoryWrapper.java,jakarta-struts-1.2.4-src,Facade,1
+jakarta-struts-1.2.4-src/share/org/apache/struts/config/ModuleConfigFactory.java,jakarta-struts-1.2.4-src,FactoryMethod,1
+jakarta-struts-1.2.4-src/share/org/apache/struts/action/RequestProcessor.java,jakarta-struts-1.2.4-src,Facade,1
+jamendo-android/src/com/teleca/jamendo/api/JamendoGet2Api.java,jamendo-android,None,0
+java-design-patterns/facade/src/main/java/com/iluwatar/facade/DwarvenGoldmineFacade.java,java-design-patterns,Facade,0
+java-design-patterns/visitor/src/main/java/com/iluwatar/visitor/CommanderVisitor.java,java-design-patterns,Visitor,1
+java-design-patterns/adapter/src/main/java/com/iluwatar/adapter/FishingBoatAdapter.java,java-design-patterns,Adapter,1
+java-design-patterns/adapter/src/main/java/com/iluwatar/adapter/FishingBoatAdapter.java,java-design-patterns,Adapter,1
+java-design-patterns/facade/src/main/java/com/iluwatar/facade/App.java,java-design-patterns,Facade,0
+java-design-patterns/visitor/src/main/java/com/iluwatar/visitor/SoldierVisitor.java,java-design-patterns,Visitor,1
+java-design-patterns/visitor/src/main/java/com/iluwatar/visitor/Unit.java,java-design-patterns,Visitor,0
+java-design-patterns/facade/src/main/java/com/iluwatar/facade/DwarvenGoldDigger.java,java-design-patterns,Facade,0
+java-design-patterns/adapter/src/main/java/com/iluwatar/adapter/Captain.java,java-design-patterns,Adapter,0
+java-design-patterns/visitor/src/main/java/com/iluwatar/visitor/SergeantVisitor.java,java-design-patterns,Visitor,1
+java-design-patterns/facade/src/main/java/com/iluwatar/facade/DwarvenCartOperator.java,java-design-patterns,Facade,0
+java-design-patterns/visitor/src/main/java/com/iluwatar/visitor/UnitVisitor.java,java-design-patterns,Visitor,0
+java-design-patterns/facade/src/main/java/com/iluwatar/facade/DwarvenTunnelDigger.java,java-design-patterns,Facade,0
+java-design-patterns/adapter/src/main/java/com/iluwatar/adapter/FishingBoatAdapter.java,java-design-patterns,Adapter,1
+java-game-server/jetclient/src/main/java/org/menacheri/jetclient/handlers/netty/TCPPipelineFactory.java,java-game-server,FactoryMethod,0
+java-game-server/jetclient/src/main/java/org/menacheri/jetclient/event/Event.java,java-game-server,None,0
+java-game-server/jetclient/src/main/java/org/menacheri/jetclient/communication/MessageBuffer.java,java-game-server,None,1
+java-game-server/jetclient/src/main/java/org/menacheri/jetclient/handlers/netty/UDPPipelineFactory.java,java-game-server,FactoryMethod,0
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/cleaner/Registration.java,java-patterns,None,0
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/classic/OracleRegistrationDAOFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/cleaner/RegistrationDAOCompositeFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/classic/RegistrationDAOAbstractFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/classic/RegistrationDAOAbstractFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/cleaner/OracleRegistrationDAOFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/classic/MySQLRegistrationDAOFactory.java,java-patterns,AbstractFactory,1
+java-patterns/src/main/java/org/abqjug/javapatterns/abstractfactory/cleaner/MySQLRegistrationDAOFactory.java,java-patterns,AbstractFactory,1
+javassist/src/main/javassist/scopedpool/ScopedClassPoolRepositoryImpl.java,javassist,FactoryMethod,0
+javassist/src/main/javassist/scopedpool/ScopedClassPoolFactoryImpl.java,javassist,FactoryMethod,1
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/ConfigurableEmbedder.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/InjectableEmbedder.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/steps/AbstractStepsFactory.java,jbehave-core,AbstractFactory,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/ConfigurableEmbedder.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/steps/AbstractStepsFactory.java,jbehave-core,FactoryMethod,0
+jbehave-core/examples/gameoflife/src/main/java/com/lunivore/gameoflife/view/swing/GameFrame.java,jbehave-core,Observer,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/configuration/Configuration.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-weld/src/main/java/org/jbehave/core/junit/weld/WeldAnnotatedPathRunner.java,jbehave-core,AbstractFactory,1
+jbehave-core/examples/noughtsandcrosses/src/main/java/com/lunivore/noughtsandcrosses/game/GameObserver.java,jbehave-core,Observer,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/embedder/Embedder.java,jbehave-core,Facade,1
+jbehave-core/examples/gameoflife/src/main/java/com/lunivore/gameoflife/view/string/StringRenderer.java,jbehave-core,Observer,0
+jbehave-core/examples/gameoflife/src/main/java/com/lunivore/gameoflife/steps/GridSteps.java,jbehave-core,None,0
+jbehave-core/examples/gameoflife/src/main/java/com/lunivore/gameoflife/domain/Game.java,jbehave-core,Observer,0
+jbehave-core/jbehave-maven-plugin/src/test/java/org/jbehave/mojo/EmbedderMojoBehaviour.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/reporters/FilePrintStreamFactory.java,jbehave-core,FactoryMethod,0
+jbehave-core/examples/gameoflife/src/main/java/com/lunivore/gameoflife/view/swing/GameFrame.java,jbehave-core,Observer,0
+jbehave-core/examples/trader-pico/src/main/java/org/jbehave/examples/trader/pico/InheritingAnnotatedEmbedderUsingSteps.java,jbehave-core,FactoryMethod,0
+jbehave-core/examples/trader/src/main/java/org/jbehave/examples/trader/steps/PendingSteps.java,jbehave-core,None,0
+jbehave-core/examples/trader/src/main/java/org/jbehave/examples/trader/steps/AbstractSteps.java,jbehave-core,None,0
+jbehave-core/examples/trader/src/main/java/org/jbehave/examples/trader/steps/FailingBeforeAfterSteps.java,jbehave-core,None,0
+jbehave-core/examples/trader/src/main/java/org/jbehave/examples/trader/steps/NamedParametersSteps.java,jbehave-core,None,0
+jbehave-core/examples/trader-guice/src/main/java/org/jbehave/examples/trader/guice/AnnotatedEmbedderUsingGuiceAndSteps.java,jbehave-core,Facade,1
+jbehave-core/examples/trader-weld/src/main/java/org/jbehave/examples/trader/weld/InheritingAnnotatedEmbedderUsingSteps.java,jbehave-core,FactoryMethod,0
+jbehave-core/examples/trader/src/main/java/org/jbehave/examples/trader/steps/SearchSteps.java,jbehave-core,None,1
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/reporters/StackTraceFormatter.java,jbehave-core,None,1
+jbehave-core/examples/trader-guice/src/main/java/org/jbehave/examples/trader/guice/InheritingAnnotatedEmbedderUsingSteps.java,jbehave-core,FactoryMethod,0
+jbehave-core/jbehave-core/src/main/java/org/jbehave/core/steps/InstanceStepsFactory.java,jbehave-core,AbstractFactory,0
+jbehave-core/jbehave-ant/src/test/java/org/jbehave/ant/EmbedderTaskBehaviour.java,jbehave-core,FactoryMethod,0
+jfreechart-1.0.11/source/org/jfree/chart/ChartFactory.java,jfreechart-1.0.11,FactoryMethod,1
+jfreechart-1.0.11/source/org/jfree/chart/JFreeChart.java,jfreechart-1.0.11,Facade,0
+jfreechart-1.0.11/source/org/jfree/chart/encoders/SunPNGEncoderAdapter.java,jfreechart-1.0.11,Adapter,0
+jfreechart-1.0.11/source/org/jfree/chart/plot/CategoryPlot.java,jfreechart-1.0.11,Observer,1
+jfreechart-1.0.12/source/org/jfree/chart/ChartFactory.java,jfreechart-1.0.12,FactoryMethod,1
+jfreechart-1.0.12/source/org/jfree/chart/JFreeChart.java,jfreechart-1.0.12,Facade,0
+jge3d/src/engine/monitoring/Subject.java,jge3d,None,1
+jge3d/src/engine/monitoring/Observer.java,jge3d,Observer,0
+jogetworkflow/wflow-formsweb/src/main/java/org/joget/form/model/FormFacade.java,jogetworkflow,Facade,1
+jogetworkflow/wflow-wfweb/src/main/java/org/joget/workflow/model/WorkflowFacade.java,jogetworkflow,Facade,1
+jruby/core/src/main/java/org/jruby/parser/Parser.java,jruby,Facade,1
+jruby/core/src/main/java/org/jruby/runtime/MethodFactory.java,jruby,FactoryMethod,1
+liferay-portal/portal-service/src/com/liferay/portal/service/permission/LayoutPrototypePermission.java,liferay-portal,None,0
+liferay-portal/portal-service/src/com/liferay/portal/security/auth/PrincipalException.java,liferay-portal,None,0
+liferay-portal/portal-service/src/com/liferay/portal/service/LayoutPrototypeLocalService.java,liferay-portal,None,0
+liferay-portal/portal-service/src/com/liferay/portal/model/LayoutPrototype.java,liferay-portal,None,0
+logging-log4j-1.2.14/src/org/apache/log4j/DefaultCategoryFactory.java,logging-log4j-1.2.14,FactoryMethod,0
+logging-log4j-1.2.14/src/org/apache/log4j/spi/LoggerRepository.java,logging-log4j-1.2.14,None,0
+logging-log4j-1.2.14/src/org/apache/log4j/Hierarchy.java,logging-log4j-1.2.14,Observer,0
+logging-log4j-1.2.14/src/org/apache/log4j/spi/RendererSupport.java,logging-log4j-1.2.14,None,0
+logging-log4j-1.2.14/src/org/apache/log4j/LogManager.java,logging-log4j-1.2.14,Facade,0
+m2eclipse-extras/org.sonatype.m2e.discovery.publisher.p2.facade/src/main/java/org/sonatype/m2e/discovery/publisher/p2/facade/P2Facade.java,m2eclipse-extras,None,0
+mapperxml-1.9.8-pre2/src/com/taursys/model/ObjectValueHolder.java,mapperxml-1.9.8-pre2,Observer,0
+mapperxml-1.9.8-pre2/src/com/taursys/dom/DOM_1_20000929_DocumentAdapter.java,mapperxml-1.9.8-pre2,Adapter,0
+mapperxml-1.9.8-pre2/src/com/taursys/html/HTMLComponentFactory.java,mapperxml-1.9.8-pre2,AbstractFactory,0
+maven-3/maven-compat/src/main/java/org/apache/maven/artifact/repository/ArtifactRepositoryFactory.java,maven-3,None,1
+maven-3/maven-core/src/main/java/org/apache/maven/project/DefaultProjectBuilder.java,maven-3,Facade,1
+maven-3/maven-model-builder/src/main/java/org/apache/maven/model/interpolation/ModelInterpolator.java,maven-3,None,1
+maven-3/maven-model-builder/src/main/java/org/apache/maven/model/plugin/LifecycleBindingsInjector.java,maven-3,None,1
+maven-3/maven-core/src/main/java/org/apache/maven/toolchain/ToolchainFactory.java,maven-3,FactoryMethod,0
+maven-3/maven-model-builder/src/main/java/org/apache/maven/model/building/DefaultModelBuilder.java,maven-3,Facade,1
+milton/milton-servlet/src/main/java/com/bradmcevoy/http/ResourceFactoryFactory.java,milton,AbstractFactory,0
+mongkie/EnrichmentAnalysisAPI/src/org/mongkie/enrichment/spi/EnrichmentBuilder.java,mongkie,FactoryMethod,0
+mongkie/PrefuseLibrary/src/prefuse/data/Tuple.java,mongkie,None,1
+mongkie/ValidationAPI/src/org/netbeans/validation/api/ui/swing/SwingComponentDecorationFactory.java,mongkie,FactoryMethod,0
+mongkie/PrefuseLibrary/src/prefuse/visual/DecoratorItem.java,mongkie,None,1
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/data/quantitystructure/QuantitystructureFactory.java,ocl,FactoryMethod,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/abapmapping/impl/AbapmappingFactoryImpl.java,ocl,AbstractFactory,0
+ocl/examples/org.eclipse.ocl.examples.xtext.oclinecore/emf-gen/org/eclipse/ocl/examples/xtext/oclinecore/oclinEcoreCST/impl/OCLinEcoreCSTFactoryImpl.java,ocl,AbstractFactory,1
+ocl/plugins/org.eclipse.ocl/src/org/eclipse/ocl/expressions/ExpressionsFactory.java,ocl,AbstractFactory,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/integration/xsd/impl/XsdFactoryImpl.java,ocl,AbstractFactory,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/data/quantitystructure/impl/QuantitystructureFactoryImpl.java,ocl,FactoryMethod,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/data/constraints/ConstraintsFactory.java,ocl,AbstractFactory,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/persistence/expressions/Commit.java,ocl,None,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/data/constraints/impl/ConstraintsFactoryImpl.java,ocl,AbstractFactory,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/persistence/expressions/ExpressionsFactory.java,ocl,AbstractFactory,0
+ocl/tests/org.eclipse.ocl.examples.impactanalyzer.testmodel.ngpm/src/persistence/expressions/impl/ExpressionsFactoryImpl.java,ocl,AbstractFactory,0
+openejb/openejb/container/openejb-core/src/main/java/org/apache/openejb/cdi/ThreadSingletonService.java,openejb,None,1
+openejb/openejb/container/openejb-core/src/main/java/org/apache/openejb/core/timer/EjbTimerService.java,openejb,None,0
+orion.server/bundles/org.eclipse.orion.server.core/src/org/eclipse/orion/server/core/resources/Property.java,orion.server,None,0
+osate2-core/org.osate.aadl2/src/org/osate/aadl2/EventDataPort.java,osate2-core,None,1
+osate2-core/org.osate.aadl2/src/org/osate/aadl2/SubprogramAccess.java,osate2-core,None,1
+osate2-core/org.osate.aadl2/src/org/osate/aadl2/Aadl2Factory.java,osate2-core,FactoryMethod,0
+osate2-core/org.osate.aadl2/src/org/osate/aadl2/impl/Aadl2FactoryImpl.java,osate2-core,FactoryMethod,1
+patra/trunk/src/main/java/com/sdi/pws/gui/compo/db/change/ChangeViewRecord.java,patra,Observer,0
+patra/trunk/src/main/java/com/sdi/pws/gui/compo/db/tree/TreeViewDatabase.java,patra,Facade,1
+patra/main/java/com/sdi/pws/gui/action/FileExport.java,patra,FactoryMethod,0
+pcgen-svn/code/src/java/pcgen/gui2/facade/SpellSupportFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/CharacterLevelsFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/core/facade/CharacterFacade.java,pcgen-svn,Facade,0
+pcgen-svn/code/src/java/pcgen/persistence/lst/LstSystemLoader.java,pcgen-svn,Observer,1
+pcgen-svn/code/src/java/pcgen/core/term/TermEvaluatorBuilderPCStat.java,pcgen-svn,FactoryMethod,1
+pcgen-svn/code/src/java/pcgen/core/DataSet.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/gui/PersistenceObserver.java,pcgen-svn,Observer,0
+pcgen-svn/code/src/java/pcgen/core/term/TermEvaluatorBuilderPCVar.java,pcgen-svn,FactoryMethod,0
+pcgen-svn/code/src/java/pcgen/core/term/EvaluatorFactory.java,pcgen-svn,FactoryMethod,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/CharacterFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/system/FacadeFactory.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/core/term/TermEvaluatorBuilderEQVar.java,pcgen-svn,FactoryMethod,0
+pcgen-svn/code/src/java/pcgen/gui2/facade/DescriptionFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/GeneralChooserFacadeBase.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/core/PlayerCharacter.java,pcgen-svn,Observer,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/CompanionSupportFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/EquipmentSetFacadeImpl.java,pcgen-svn,Facade,1
+pcgen-svn/code/src/java/pcgen/gui2/facade/LanguageChooserFacadeImpl.java,pcgen-svn,Facade,1
+pellet/pellet-owlapiv3/src/main/java/com/clarkparsia/pellet/owlapiv3/EntailmentQueryVisitor.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/org/mindswap/pellet/KnowledgeBase.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/com/clarkparsia/pellet/rules/ContinuousReteTransformer.java,pellet,Visitor,0
+pellet/pellet-owlapi/src/main/java/org/mindswap/pellet/owlapi/ConceptConverter.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/org/mindswap/pellet/KnowledgeBase.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/com/clarkparsia/pellet/rules/builtins/FunctionApplicationVisitor.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/org/mindswap/pellet/KnowledgeBase.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/org/mindswap/pellet/KnowledgeBase.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/com/clarkparsia/pellet/rules/builtins/FunctionApplicationVisitor.java,pellet,Visitor,0
+pellet/pellet-common/src/main/java/org/mindswap/pellet/Node.java,pellet,Visitor,0
+petals-studio/plugins/com.ebmwebsourcing.petals.services.jms/src-model/com/ebmwebsourcing/petals/services/jms/jms/JmsFactory.java,petals-studio,FactoryMethod,0
+petals-studio/plugins/com.ebmwebsourcing.petals.services.mail/src-model/com/ebmwebsourcing/petals/services/mail/mail/MailFactory.java,petals-studio,FactoryMethod,0
+petals-studio/plugins/com.ebmwebsourcing.jbi.core.metamodel/src-model/com/sun/java/xml/ns/jbi/DocumentRoot.java,petals-studio,None,1
+petals-studio/plugins/com.ebmwebsourcing.jbi.core.metamodel/src-model/com/sun/java/xml/ns/jbi/JbiFactory.java,petals-studio,FactoryMethod,0
+petals-studio/plugins/com.ebmwebsourcing.petals.services.filetransfer/src-model/com/ebmwebsourcing/petals/services/filetransfer/filetransfer2x/Filetransfer2xFactory.java,petals-studio,FactoryMethod,0
+petals-studio/plugins/com.ebmwebsourcing.petals.services.cdk/src-model/com/ebmwebsourcing/petals/services/cdk/cdk5/Cdk5Factory.java,petals-studio,FactoryMethod,0
+petals-studio/plugins/com.ebmwebsourcing.petals.services.filetransfer/src-model/com/ebmwebsourcing/petals/services/filetransfer/filetransfer3/impl/Filetransfer3FactoryImpl.java,petals-studio,FactoryMethod,1
+petals-studio/plugins/com.ebmwebsourcing.petals.services.filetransfer/src-model/com/ebmwebsourcing/petals/services/filetransfer/filetransfer3/Filetransfer3Factory.java,petals-studio,FactoryMethod,0
+platform/components/broker-manager/org.wso2.carbon.brokermanager.core/src/main/java/org/wso2/carbon/brokermanager/core/exception/BMConfigurationException.java,platform,None,0
+platform/components/transaction-manager/org.wso2.carbon.transaction.manager/src/main/java/org/wso2/carbon/transaction/manager/TransactionManagerAxis2ConfigurationContextObserver.java,platform,None,0
+platform/dependencies/synapse/2.1.0-wso2v6/modules/core/src/main/java/org/apache/synapse/config/AbstractSynapseObserver.java,platform,None,0
+platform/components/business-messaging/paypal/org.wso2.carbon.business.messaging.paypal.integration.core/src/main/java/org/wso2/carbon/business/messaging/paypal/integration/PaypalSOAPProxy.java,platform,None,0
+platform/components/mediation-statistics/org.wso2.carbon.mediation.statistics/src/main/java/org/wso2/carbon/mediation/statistics/MediationStatisticsObserver.java,platform,None,0
+platform/components/bam-data-publishers/org.wso2.carbon.bam.lwevent.core/src/main/java/org/wso2/carbon/bam/lwevent/core/ServiceStatisticsPublisherConstants.java,platform,None,0
+platform/dependencies/synapse/2.1.0-wso2v6/modules/core/src/main/java/org/apache/synapse/message/store/MessageStore.java,platform,None,0
+platform/components/bam-data-publishers/org.wso2.carbon.bam.data.publisher.servicestats/src/main/java/org/wso2/carbon/bam/data/publisher/servicestats/internal/ServiceStatisticsAxis2ConfigurationContextObserver.java,platform,None,0
+platform/components/ntask/org.wso2.carbon.ntask.core/src/main/java/org/wso2/carbon/ntask/core/impl/TaskAxis2ConfigurationContextObserver.java,platform,None,0
+platform/dependencies/synapse/2.1.0-wso2v6/modules/core/src/main/java/org/apache/synapse/message/store/MessageStoreObserver.java,platform,None,0
+platform/components/broker-manager/org.wso2.carbon.brokermanager.core/src/main/java/org/wso2/carbon/brokermanager/core/internal/build/Axis2ConfigurationContextObserverImpl.java,platform,None,0
+platform/components/identity/org.wso2.carbon.identity.entitlement.proxy/src/main/org/wso2/carbon/identity/entitlement/proxy/AbstractPDPProxy.java,platform,None,0
+platform/components/csg/org.wso2.carbon.cloud.csg.agent/src/main/java/org/wso2/carbon/cloud/csg/agent/observer/CSGAgentObserver.java,platform,None,0
+platform/components/bam-data-publishers/org.wso2.carbon.bam.lwevent.core/src/main/java/org/wso2/carbon/bam/lwevent/core/internal/ServiceStatisticsAxis2ConfigurationContextObserver.java,platform,None,0
+platform/components/ntask/org.wso2.carbon.ntask.core/src/main/java/org/wso2/carbon/ntask/core/service/TaskService.java,platform,None,0
+platform/dependencies/synapse/2.1.0-wso2v6/modules/core/src/main/java/org/apache/synapse/config/SynapseObserver.java,platform,None,0
+platform/components/business-messaging/paypal/org.wso2.carbon.business.messaging.paypal.integration.core/src/main/java/org/wso2/carbon/business/messaging/paypal/integration/AbstractProxy.java,platform,None,0
+platform/components/ws-discovery/org.wso2.carbon.discovery.proxy/src/main/java/org/wso2/carbon/discovery/proxy/DiscoveryProxyObserver.java,platform,None,0
+platform/components/business-processes/humantask/org.wso2.carbon.humantask.cleanup.scheduler/src/main/java/org/wso2/carbon/humantask/cleanup/scheduler/internal/HumanTaskCleanupSchedulerContentHolder.java,platform,None,0
+platform_frameworks_base/core/java/android/content/SyncStatusObserver.java,platform_frameworks_base,None,0
+po-mindstorms/src/java/penoplatinum/grid/FacadeSector.java,po-mindstorms,Facade,1
+poi/src/ooxml/java/org/apache/poi/ss/usermodel/WorkbookFactory.java,poi,FactoryMethod,1
+poi/src/java/org/apache/poi/hssf/usermodel/HSSFWorkbook.java,poi,Facade,1
+poi/src/java/org/apache/poi/poifs/filesystem/POIFSFileSystem.java,poi,Facade,1
+poi/src/java/org/apache/poi/hssf/record/RecordFactory.java,poi,FactoryMethod,1
+refactoring_guru/abstract_factory/example/checkboxes/Checkbox.java,refactoring_guru,None,1
+refactoring_guru/factory_method/example/factory/Dialog.java,refactoring_guru,FactoryMethod,1
+refactoring_guru/abstract_factory/example/factories/GUIFactory.java,refactoring_guru,AbstractFactory,0
+refactoring_guru/visitor/example/visitor/Visitor.java,refactoring_guru,Visitor,1
+rhino/src/org/mozilla/javascript/ContextFactory.java,rhino,FactoryMethod,1
+rhino/src/org/mozilla/javascript/ContextFactory.java,rhino,FactoryMethod,1
+rhino/src/org/mozilla/javascript/ast/Name.java,rhino,Visitor,0
+rhino/toolsrc/org/mozilla/javascript/tools/shell/Main.java,rhino,Facade,1
+santuario-java/src/main/java/org/apache/xml/security/stax/impl/securityToken/SecurityTokenFactory.java,santuario-java,FactoryMethod,1
+santuario-java/src/main/java/org/apache/xml/security/stax/impl/securityToken/SecurityTokenFactoryImpl.java,santuario-java,FactoryMethod,1
+see/src/main/java/see/parser/numbers/IntegerFactory.java,see,FactoryMethod,0
+see/src/main/java/see/parser/config/ConfigBuilder.java,see,FactoryMethod,1
+see/src/main/java/see/parser/numbers/NumberFactory.java,see,FactoryMethod,0
+see/src/main/java/see/parser/numbers/LocalizedBigDecimalFactory.java,see,FactoryMethod,0
+see/src/main/java/see/parser/numbers/DoubleFactory.java,see,FactoryMethod,0
+smsc-server/smsclet-api/src/main/java/org/apache/smscserver/smsclet/Smsclet.java,smsc-server,None,1
+smsc-server/core/src/main/java/org/apache/smscserver/impl/DefaultSmscStatistics.java,smsc-server,Observer,1
+smsc-server/core/src/main/java/org/apache/smscserver/impl/DefaultSmscStatistics.java,smsc-server,Observer,1
+smsc-server/core/src/main/java/org/apache/smscserver/impl/DefaultSmscServerContext.java,smsc-server,FactoryMethod,1
+smsc-server/core/src/main/java/org/apache/smscserver/listener/Listener.java,smsc-server,None,0
+smsc-server/core/src/main/java/org/apache/smscserver/impl/DefaultSmscStatistics.java,smsc-server,Observer,1
+smsc-server/core/src/main/java/org/apache/smscserver/SmscServerFactory.java,smsc-server,FactoryMethod,1
+smsc-server/core/src/main/java/org/apache/smscserver/message/DBMessageManagerFactory.java,smsc-server,FactoryMethod,1
+smsc-server/smsclet-api/src/main/java/org/apache/smscserver/smsclet/Authentication.java,smsc-server,None,1
+soapui/src/java/com/eviware/soapui/support/editor/views/xml/source/XmlSourceEditorViewFactory.java,soapui,FactoryMethod,1
+soapui/src/java/com/eviware/soapui/support/editor/views/xml/source/XmlSourceEditorViewFactory.java,soapui,FactoryMethod,1
+soapui/src/java/com/eviware/soapui/impl/InterfaceFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/editor/inspectors/wss/WssInspectorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/editor/inspectors/wsa/WsaInspectorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/resolver/ChooseAnotherPropertyTargetResolver.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/impl/rest/panels/method/RestMethodPanelBuilder.java,soapui,FactoryMethod,1
+soapui/src/java/com/eviware/soapui/support/editor/registry/ResponseInspectorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/editor/views/xml/raw/RawXmlEditorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/editor/inspectors/httpheaders/HttpHeadersInspectorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/impl/rest/panels/request/views/html/HttpHtmlResponseViewFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/impl/rest/panels/request/RestRequestPanelBuilder.java,soapui,FactoryMethod,1
+soapui/src/java/com/eviware/soapui/impl/rest/panels/request/views/json/JsonResponseViewFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/support/editor/inspectors/attachments/AttachmentsInspectorFactory.java,soapui,FactoryMethod,0
+soapui/src/java/com/eviware/soapui/impl/EmptyPanelBuilder.java,soapui,FactoryMethod,1
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/apiusage/StandardApiUsageDetector.java,spring-migration-analyzer,Adapter,0
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/bytecode/DelegatingMethodVisitor.java,spring-migration-analyzer,FactoryMethod,0
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/bytecode/DelegatingByteCodeEntryAnalyzer.java,spring-migration-analyzer,FactoryMethod,0
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/apiusage/ApiUsageDetectingAsmVisitor.java,spring-migration-analyzer,Adapter,0
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/bytecode/DelegatingClassVisitorFactory.java,spring-migration-analyzer,FactoryMethod,1
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/apiusage/ApiUsageDetector.java,spring-migration-analyzer,Adapter,0
+spring-migration-analyzer/contributions/src/main/java/org/springframework/migrationanalyzer/contributions/bytecode/DelegatingByteCodeEntryAnalyzer.java,spring-migration-analyzer,FactoryMethod,0
+spring-migration-analyzer/contributions/src/test/java/org/springframework/migrationanalyzer/contributions/bytecode/StubResultGatheringClassVisitorFactory.java,spring-migration-analyzer,FactoryMethod,0
+spring-social-twitter/spring-social-twitter/src/main/java/org/springframework/social/twitter/api/impl/TwitterTemplate.java,spring-social-twitter,Facade,0
+spring-social-twitter/spring-social-twitter/src/main/java/org/springframework/social/twitter/api/GeoOperations.java,spring-social-twitter,None,0
+spring-social-twitter/spring-social-twitter/src/main/java/org/springframework/social/twitter/api/Twitter.java,spring-social-twitter,Facade,0
+spring-stringtemplate/src/main/java/com/watchitlater/spring/Encoder.java,spring-stringtemplate,None,1
+spring-stringtemplate/src/main/java/com/watchitlater/spring/StringTemplateView.java,spring-stringtemplate,Adapter,0
+spring-stringtemplate/src/main/java/com/watchitlater/spring/StringTemplateViewResolver.java,spring-stringtemplate,FactoryMethod,1
+sslr/sslr-core/src/main/java/com/sonar/sslr/api/AstAndTokenVisitor.java,sslr,Visitor,0
+sslr/sslr-core/src/main/java/com/sonar/sslr/impl/ParsingStackTrace.java,sslr,Observer,0
+sslr/sslr-core/src/main/java/com/sonar/sslr/api/flow/ExecutionFlowEngine.java,sslr,Observer,1
+sslr/sslr-core/src/main/java/com/sonar/sslr/api/AstVisitor.java,sslr,Visitor,0
+sslr/sslr-core/src/main/java/com/sonar/sslr/api/flow/ExecutionFlowVisitor.java,sslr,None,1
+sslr/sslr-symboltable/src/main/java/org/sonar/sslr/symboltable/SymbolTableBuilder.java,sslr,Visitor,0
+stratosphere/nephele/nephele-server/src/main/java/eu/stratosphere/nephele/checkpointing/ReplayTask.java,stratosphere,Observer,0
+stratosphere/nephele/nephele-server/src/main/java/eu/stratosphere/nephele/execution/RuntimeEnvironment.java,stratosphere,Observer,1
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/main/MainModelObserver.java,swing-mvc-demo,Observer,0
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/MvcDemo.java,swing-mvc-demo,Observer,0
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/user/UserModelObserver.java,swing-mvc-demo,Observer,0
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/main/MainView.java,swing-mvc-demo,Observer,0
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/group/GroupModelObserver.java,swing-mvc-demo,Observer,0
+swing-mvc-demo/src/main/java/org/karpukhin/swingmvcdemo/ui/MvcDemo.java,swing-mvc-demo,Observer,0
+teiid-designer/deprecated/org.teiid.designer.rose/src/com/metamatrix/rose/internal/handler/UmlHandler.java,teiid-designer,FactoryMethod,0
+tomcat70/java/org/apache/catalina/core/StandardServer.java,tomcat70,FactoryMethod,0
+tomcat70/java/org/apache/catalina/mbeans/MBeanFactory.java,tomcat70,FactoryMethod,0
+wayback/wayback-core/src/main/java/org/archive/wayback/archivalurl/ArchivalUrlSAXRewriteReplayRenderer.java,wayback,FactoryMethod,0
+wayback/wayback-core/src/main/java/org/archive/wayback/resourceindex/filterfactory/FilterGroupFactory.java,wayback,FactoryMethod,0
+wayback/wayback-core/src/main/java/org/archive/wayback/replay/JSPExecutor.java,wayback,FactoryMethod,0
+zk/zcommon/src/org/zkoss/idom/input/DefaultIDOMFactory.java,zk,AbstractFactory,1
+zk/zk/src/org/zkoss/zk/ui/impl/AbstractUiFactory.java,zk,AbstractFactory,1
+zk/zk/src/org/zkoss/zk/ui/impl/AbstractUiFactory.java,zk,AbstractFactory,1
+zk/zk/src/org/zkoss/zk/ui/http/SimpleUiFactory.java,zk,AbstractFactory,1
+zk/zk/src/org/zkoss/zk/ui/http/SerializableUiFactory.java,zk,AbstractFactory,1
+zk/zcommon/src/org/zkoss/idom/input/DefaultIDOMFactory.java,zk,AbstractFactory,1
