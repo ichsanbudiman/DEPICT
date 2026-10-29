@@ -14,7 +14,7 @@ import json
 import re
 import shutil
 import sys
-from collections import defaultdict
+from collections import defaultdict, deque
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
@@ -32,6 +32,7 @@ from constants import (
 )
 from keepset import (
     NEIGHBOURHOOD_V1,
+    NEIGHBOURHOOD_V2,
     NEIGHBOURHOODS,
     keep_set,
     parse_neighbourhood,
@@ -531,6 +532,102 @@ def _outside_radius(feats: dict, tid: str, max_hops: int) -> bool:
     return not isinstance(hop, (int, float)) or hop < 0 or hop > max_hops
 
 
+def _in_model_view(obj: dict) -> bool:
+    return obj.get("in_model_view") is not False
+
+
+def _view_type_distance(
+    g: ProjectGraph, gold: str, nodes: List[dict], edges: List[dict]
+) -> Dict[str, int]:
+    """Hop of each in-view type, counted only on in-view edges."""
+    in_view = {node["id"] for node in nodes if _in_model_view(node)}
+    adj: Dict[str, set] = defaultdict(set)
+
+    def as_type(nid: str) -> Optional[str]:
+        if g.is_type(nid):
+            return nid
+        return g.owner_type(nid)
+
+    for edge in edges:
+        if not _in_model_view(edge):
+            continue
+        if edge["src_id"] not in in_view or edge["dst_id"] not in in_view:
+            continue
+        src = as_type(edge["src_id"])
+        dst = as_type(edge["dst_id"])
+        if not src or not dst or src == dst:
+            continue
+        if src not in in_view or dst not in in_view:
+            continue
+        adj[src].add(dst)
+        adj[dst].add(src)
+    dist = {gold: 0}
+    queue = deque([gold])
+    while queue:
+        cur = queue.popleft()
+        for nxt in adj.get(cur, ()):
+            if nxt not in dist:
+                dist[nxt] = dist[cur] + 1
+                queue.append(nxt)
+    return dist
+
+
+def _confirm_model_view_hops(
+    g: ProjectGraph,
+    gold: str,
+    nodes: List[dict],
+    edges: List[dict],
+    feats: dict,
+    max_hops: int,
+) -> None:
+    """Flag any still-visible node the in-view edges place past the radius.
+
+    A node with ``in_model_view`` left unset is in the model view. After this
+    returns, every such type has hop 0 through ``max_hops`` on those edges,
+    and every such member shares its declaring type's hop.
+    """
+    while True:
+        dist = _view_type_distance(g, gold, nodes, edges)
+        drop = set()
+        for node in nodes:
+            if not _in_model_view(node):
+                continue
+            if node["kind"] == KIND_TYPE:
+                hop = dist.get(node["id"], -1)
+                if node["id"] != gold and (hop < 0 or hop > max_hops):
+                    drop.add(node["id"])
+                continue
+            owner = g.owner_type(node["id"])
+            hop = dist.get(owner, -1) if owner else -1
+            if hop < 0 or hop > max_hops:
+                drop.add(node["id"])
+        if not drop:
+            break
+        for node in nodes:
+            owner = node["id"] if node["kind"] == KIND_TYPE else g.owner_type(node["id"])
+            if node["id"] in drop or owner in drop:
+                node["in_model_view"] = False
+                drop.add(node["id"])
+        for edge in edges:
+            if edge["src_id"] in drop or edge["dst_id"] in drop:
+                edge["in_model_view"] = False
+    dist = _view_type_distance(g, gold, nodes, edges)
+    for node in nodes:
+        if not _in_model_view(node):
+            continue
+        if node["kind"] == KIND_TYPE:
+            hop = dist[node["id"]]
+        else:
+            hop = dist[g.owner_type(node["id"])]
+        row = feats.setdefault(node["id"], {"is_root": 0.0, "has_bidirectional_call": 0.0})
+        row["hop_distance"] = float(hop)
+    assert_type_hops(
+        feats,
+        [node["id"] for node in nodes if node["kind"] == KIND_TYPE and _in_model_view(node)],
+        max_hops,
+    )
+
+
 def _hop_sort_key(g: ProjectGraph, nid: str, kind: str, feats: dict) -> tuple:
     owner = nid if kind == KIND_TYPE else (g.owner_type(nid) or nid)
     hop = (feats.get(nid) or {}).get("hop_distance", -1.0)
@@ -622,9 +719,11 @@ def member_graph(
             "hop_distance": 0.0,
             "has_bidirectional_call": 0.0,
         }
-    members.sort(key=lambda item: _hop_sort_key(g, item[0], item[1], feats))
     nodes = [_render_node(g, nid, kind, gold, out_of_view) for nid, kind in members]
-    order = {node["id"]: i for i, node in enumerate(nodes)}
+    _confirm_model_view_hops(g, gold, nodes, edges, feats, max_hops)
+    members.sort(key=lambda item: _hop_sort_key(g, item[0], item[1], feats))
+    order = {nid: i for i, (nid, _kind) in enumerate(members)}
+    nodes.sort(key=lambda node: order.get(node["id"], 10**9))
     edges.sort(
         key=lambda edge: (
             order.get(edge["src_id"], 10**9),
@@ -823,8 +922,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument(
         "--neighbourhood",
         choices=NEIGHBOURHOODS,
-        default=NEIGHBOURHOOD_V1,
-        help="v1 is the original keep-set. v2 is the paper's collaboration neighbourhood",
+        default=NEIGHBOURHOOD_V2,
+        help="v2 is the paper's collaboration neighbourhood (default). v1 is the original keep-set",
     )
     args = p.parse_args(argv)
     active_only = not args.include_inactive
@@ -834,6 +933,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     if not args.graph_dpd.is_dir():
         print(f"Graph-DPD root missing: {args.graph_dpd}", file=sys.stderr)
         return 1
+    print(f"neighbourhood={args.neighbourhood} hops={args.hops}")
     groups = load_gold_groups(args.gold, args.graph_dpd, active_only, args.project)
     if not groups:
         print("no gold rows matched Graph-DPD folders", file=sys.stderr)

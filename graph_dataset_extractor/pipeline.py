@@ -20,7 +20,7 @@ CODE_DIR = Path(__file__).resolve().parent
 if str(CODE_DIR) not in sys.path:
     sys.path.insert(0, str(CODE_DIR))
 
-from keepset import NEIGHBOURHOOD_V1, NEIGHBOURHOODS
+from keepset import NEIGHBOURHOOD_V2, NEIGHBOURHOODS
 from paths import GOLD_CSV, MEMBER_OUT, SGR_ROOT, ensure_sgr_on_path
 
 
@@ -141,8 +141,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument(
         "--neighbourhood",
         choices=NEIGHBOURHOODS,
-        default=NEIGHBOURHOOD_V1,
-        help="v1 is the original keep-set; v2 is the paper's collaboration neighbourhood",
+        default=NEIGHBOURHOOD_V2,
+        help="v2 is the paper's collaboration neighbourhood (default). v1 is the original keep-set",
     )
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)
