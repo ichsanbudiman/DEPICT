@@ -526,6 +526,11 @@ def _pointed_at_by(g: ProjectGraph, nid: str, sources: set) -> bool:
     return False
 
 
+def _outside_radius(feats: dict, tid: str, max_hops: int) -> bool:
+    hop = (feats.get(tid) or {}).get("hop_distance", -1)
+    return not isinstance(hop, (int, float)) or hop < 0 or hop > max_hops
+
+
 def _hop_sort_key(g: ProjectGraph, nid: str, kind: str, feats: dict) -> tuple:
     owner = nid if kind == KIND_TYPE else (g.owner_type(nid) or nid)
     hop = (feats.get(nid) or {}).get("hop_distance", -1.0)
@@ -601,13 +606,16 @@ def member_graph(
         + [(nid, KIND_FIELD) for nid in fields]
     )
     edges = v5_edges(g, view_types, methods, fields)
-    for edge in edges:
-        if edge["src_id"] in hidden or edge["dst_id"] in hidden:
-            edge["in_model_view"] = False
     feats = structural_features(
         g, gold, view_types | {gold}, view_methods, view_fields, model_edges
     )
-    assert_type_hops(feats, view_types, max_hops)
+    beyond = {tid for tid in view_types if tid != gold and _outside_radius(feats, tid, max_hops)}
+    parked = beyond | {nid for nid in methods | fields if g.owner_type(nid) in beyond}
+    out_of_view = hidden | parked
+    for edge in edges:
+        if edge["src_id"] in out_of_view or edge["dst_id"] in out_of_view:
+            edge["in_model_view"] = False
+    assert_type_hops(feats, view_types - beyond, max_hops)
     for nid in hidden:
         feats[nid] = {
             "is_root": 0.0,
@@ -615,7 +623,7 @@ def member_graph(
             "has_bidirectional_call": 0.0,
         }
     members.sort(key=lambda item: _hop_sort_key(g, item[0], item[1], feats))
-    nodes = [_render_node(g, nid, kind, gold, hidden) for nid, kind in members]
+    nodes = [_render_node(g, nid, kind, gold, out_of_view) for nid, kind in members]
     order = {node["id"]: i for i, node in enumerate(nodes)}
     edges.sort(
         key=lambda edge: (
