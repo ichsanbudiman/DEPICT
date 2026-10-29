@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# Usage: bash script/extract_project.sh <java_project_dir> [output_root]
-# Then convert with: bash script/from_sgr.sh [output_root]
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="${1:?java project path required}"
