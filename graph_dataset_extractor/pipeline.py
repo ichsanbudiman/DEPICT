@@ -4,7 +4,7 @@ Each project directory holds the SGR and the graph written from it::
 
     <sgr-root>/<Project>/
       metadata.yaml
-      sgr_project.yaml
+      project_sgr.yaml
       graph.json
       features/<instance_id>/*.csv
 """
@@ -34,9 +34,9 @@ def extract_sgr(java_project: Path, sgr_root: Path) -> Path:
     from symbolic_extractors.multifile.subgraph_dataset import process_dpd_project
 
     written = process_dpd_project(java_project, sgr_root)
-    out = Path(written["model_graph"]).parent.parent
+    out = Path(written["model_graph"]).parent
     print(f"sgr {out}")
-    print(f"  model_graph {written['model_graph']}")
+    print(f"  project_sgr {written['model_graph']}")
     print(f"  metadata {written['metadata']}")
     return out
 
@@ -154,7 +154,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    pe = sub.add_parser("extract", help="Java tree -> sgr_project.yaml")
+    pe = sub.add_parser("extract", help="Java tree -> project_sgr.yaml")
     pe.add_argument("--project", type=Path, required=True)
     pe.set_defaults(func=cmd_extract)
 

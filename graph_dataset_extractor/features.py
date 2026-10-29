@@ -29,7 +29,7 @@ from constants import (
     TYPE_FEAT_NAMES,
 )
 from keepset import ancestor_types, created_pairs_with_uses, infer_element_types, method_use_types
-from paths import DATASET, GRAPH_FILE, SGR_ROOT
+from paths import DATASET, GRAPH_FILE, PROJECT_SGR_FILE, SGR_ROOT
 from sgr_load import ProjectGraph, SgrNode, load_project_yaml
 CLASS_KIND = {"Class": 0.0, "Interface": 1.0, "Enum": 2.0, "Record": 3.0}
 
@@ -392,7 +392,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         yp = project_yaml_path(args.graph_dpd, folder)
         print(f"load {yp}  graphs={len(active_items)}", file=sys.stderr)
         if not yp.is_file():
-            print(f"missing project.yaml: {folder}", file=sys.stderr)
+            print(f"missing {PROJECT_SGR_FILE}: {folder}", file=sys.stderr)
             continue
         sgr = load_project_yaml(yp)
         proj_index = []

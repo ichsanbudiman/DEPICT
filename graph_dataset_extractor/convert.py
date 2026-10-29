@@ -42,7 +42,7 @@ from keepset import (
     v5_edges,
 )
 from java_text import load_windows, stamp_node_files
-from paths import GOLD_CSV, GRAPH_FILE, JAVA_PROJECTS, MEMBER_OUT, SGR_ROOT
+from paths import GOLD_CSV, GRAPH_FILE, JAVA_PROJECTS, MEMBER_OUT, PROJECT_SGR_FILE, SGR_ROOT
 from sgr_load import (
     ProjectGraph,
     SgrNode,
@@ -838,9 +838,9 @@ def convert_project(
     java_text: bool = False,
 ) -> None:
     neighbourhood = parse_neighbourhood(neighbourhood)
-    yaml_path = graph_dpd / folder / "sgr_project.yaml"
+    yaml_path = graph_dpd / folder / PROJECT_SGR_FILE
     if not yaml_path.is_file():
-        raise FileNotFoundError(f"missing sgr_project.yaml: {yaml_path}")
+        raise FileNotFoundError(f"missing {PROJECT_SGR_FILE}: {yaml_path}")
     print(f"load {yaml_path}")
     g = load_project_model(yaml_path)
     meta = load_metadata_document(graph_dpd / folder / "metadata.yaml")
@@ -904,7 +904,7 @@ def convert_project(
 
 def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(
-        description="SGR sgr_project.yaml → graph.json"
+        description="SGR project_sgr.yaml → graph.json"
     )
     p.add_argument(
         "--graph-dpd",
@@ -912,7 +912,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         dest="graph_dpd",
         type=Path,
         default=SGR_ROOT,
-        help="Root of SGR project folders (each has sgr_project.yaml)",
+        help="Root of SGR project folders (each has project_sgr.yaml)",
     )
     p.add_argument(
         "--gold",

@@ -317,7 +317,7 @@ def _edge_from_yaml(raw: dict) -> SgrEdge:
 
 
 def load_project_model(path: Path) -> ProjectGraph:
-    """Load sgr_project.yaml with member source, signature, and edge facts."""
+    """Load project_sgr.yaml with member source, signature, and edge facts."""
     import yaml
 
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}

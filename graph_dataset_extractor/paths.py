@@ -24,8 +24,9 @@ def _sgr_root() -> Path:
     return path
 
 
-# Each project is <SGR_ROOT>/<Project>/sgr_project.yaml
+# Each project is <SGR_ROOT>/<Project>/project_sgr.yaml
 SGR_ROOT = _sgr_root()
+PROJECT_SGR_FILE = "project_sgr.yaml"
 
 
 def _java_projects() -> Path | None:
@@ -43,7 +44,7 @@ def _java_projects() -> Path | None:
 
 JAVA_PROJECTS = _java_projects()
 
-# graph.json and features/ are written beside <Project>/sgr_project.yaml
+# graph.json and features/ are written beside <Project>/project_sgr.yaml
 GRAPH_FILE = "graph.json"
 MEMBER_OUT = SGR_ROOT
 

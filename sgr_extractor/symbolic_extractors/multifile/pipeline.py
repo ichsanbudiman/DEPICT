@@ -126,13 +126,13 @@ def process_project(
 
         metadata.yaml
         files/*.java.sgr.yaml          # raw local SGR
-        graph.yaml                     # resolved project graph
-        model_graph/project.yaml       # compressed GNN graph
+        full_project_graph.yaml        # resolved project graph
+        project_sgr.yaml               # compressed graph the dataset reader uses
 
     Member nodes carry ``file``, ``source``, and ``signature`` (types also
     carry ``package`` and ``supertypes``). ``metadata.yaml`` ``sources`` holds
     each file text window. ``graph_dataset_extractor.convert`` reads
-    ``model_graph/project.yaml`` and ``metadata.yaml`` from this ``output_dir``.
+    ``project_sgr.yaml`` and ``metadata.yaml`` from this ``output_dir``.
 
     Optional ``java_files`` limits extraction to a subset (subgraph mode).
     Optional ``labels`` / ``extra_metadata`` are merged into metadata.yaml.
@@ -162,9 +162,8 @@ def process_project(
         raise FileNotFoundError(f"No .java files selected under {source_root}")
 
     files_dir = output_dir / "files"
-    model_dir = output_dir / "model_graph"
     files_dir.mkdir(parents=True, exist_ok=True)
-    model_dir.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     # Shared allocator → globally unique IDs across the project.
     ids = id_allocator()
@@ -237,13 +236,13 @@ def process_project(
 
     # Stage 3: cross-file resolution
     resolved = resolve_project_graph(file_sgrs, metadata)
-    graph_path = output_dir / "graph.yaml"
+    graph_path = output_dir / "full_project_graph.yaml"
     save_yaml(graph_path, resolved)
     written["graph"] = graph_path
 
     # Stage 4: GNN-compressed view
     model = compress_for_gnn(resolved)
-    model_path = model_dir / "project.yaml"
+    model_path = output_dir / "project_sgr.yaml"
     save_yaml(model_path, model)
     written["model_graph"] = model_path
 

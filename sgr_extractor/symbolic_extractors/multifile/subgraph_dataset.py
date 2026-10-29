@@ -13,8 +13,8 @@ Default (project mode) writes one sample per project::
     <output>/<project>/
       metadata.yaml
       files/javas/*.java.sgr.yaml
-      graph.yaml
-      model_graph/project.yaml
+      full_project_graph.yaml
+      project_sgr.yaml
 """
 
 from __future__ import annotations
@@ -307,8 +307,8 @@ def process_dpd_project(
         <output_root>/<safe_project_name>/
           metadata.yaml
           files/.../*.java.sgr.yaml
-          graph.yaml
-          model_graph/project.yaml
+          full_project_graph.yaml
+          project_sgr.yaml
 
     Optional DPD ``labels.csv`` / ``subgraph/`` enrich metadata only.
     """

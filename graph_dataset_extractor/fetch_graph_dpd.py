@@ -83,15 +83,13 @@ def copy_local(src_root: Path, remote_dir: str, dest_dir: Path) -> bool:
     if not meta.is_file() or not yaml.is_file():
         return False
     dest_dir.mkdir(parents=True, exist_ok=True)
-    (dest_dir / "model_graph").mkdir(parents=True, exist_ok=True)
     shutil.copy2(meta, dest_dir / "metadata.yaml")
-    shutil.copy2(yaml, dest_dir / "model_graph" / "project.yaml")
+    shutil.copy2(yaml, dest_dir / "project_sgr.yaml")
     return True
 
 
 def rsync_ssh(ssh: str, src_root: Path, remote_dir: str, dest_dir: Path) -> bool:
     dest_dir.mkdir(parents=True, exist_ok=True)
-    (dest_dir / "model_graph").mkdir(parents=True, exist_ok=True)
     remote = f"{ssh}:{src_root}/{remote_dir}"
     ok = True
     cmds = [
@@ -100,7 +98,7 @@ def rsync_ssh(ssh: str, src_root: Path, remote_dir: str, dest_dir: Path) -> bool
             "rsync",
             "-a",
             f"{remote}/model_graph/project.yaml",
-            str(dest_dir / "model_graph" / "project.yaml"),
+            str(dest_dir / "project_sgr.yaml"),
         ],
     ]
     for cmd in cmds:
@@ -109,11 +107,11 @@ def rsync_ssh(ssh: str, src_root: Path, remote_dir: str, dest_dir: Path) -> bool
             ok = False
             break
     if not ok:
-        for p in (dest_dir / "metadata.yaml", dest_dir / "model_graph" / "project.yaml"):
+        for p in (dest_dir / "metadata.yaml", dest_dir / "project_sgr.yaml"):
             if p.is_file() and p.stat().st_size == 0:
                 p.unlink()
     return ok and (dest_dir / "metadata.yaml").is_file() and (
-        dest_dir / "model_graph" / "project.yaml"
+        dest_dir / "project_sgr.yaml"
     ).is_file()
 
 
