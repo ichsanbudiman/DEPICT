@@ -29,6 +29,14 @@ HOPS=1
 NEIGH=v2
 # 1 reads snippet text from JAVA_PROJECTS. Leave 0 when metadata.yaml already has sources.
 JAVA_TEXT=0
+SUMMARY="${PROJECT_DIR}/logs/extract_sgr_summary.log"
+_BB_CPU_TAG="${BB_CPU:-generic}"
+export DEPICT_VENV="${DEPICT_VENV:-/rds/projects/m/minkull-spdisc-ichsan/ichsan/venvs/depict-${_BB_CPU_TAG}}"
+if [[ -x "${DEPICT_VENV}/bin/python" ]]; then
+  # shellcheck disable=SC1091
+  source "${DEPICT_VENV}/bin/activate"
+  export PATH="${DEPICT_VENV}/bin:${PATH}"
+fi
 echo "Job ID:        ${SLURM_JOB_ID:-local}"
 echo "Node:          ${SLURM_NODELIST:-local}"
 echo "Date:          $(date)"
@@ -37,9 +45,11 @@ echo "Python:        $(command -v python3)  $(python3 --version 2>&1)"
 echo "Neighbourhood: ${NEIGH}"
 echo "Hops:          ${HOPS}"
 echo "Java text:     ${JAVA_TEXT}"
+echo "SGR summary:   ${SUMMARY}"
+echo "Graph summary: ${PROJECT_DIR}/logs/from_sgr_summary.log"
 echo "=========================================="
 
-bash script/from_sgr.sh "" "" "" "$HOPS" "$NEIGH" "$JAVA_TEXT"
+bash script/from_sgr.sh "" "" "" "$HOPS" "$NEIGH" "$JAVA_TEXT" "$SUMMARY"
 EXIT_CODE=$?
 
 echo ""

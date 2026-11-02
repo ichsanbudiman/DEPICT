@@ -65,6 +65,8 @@ def cmd_convert(args: argparse.Namespace) -> int:
     argv.extend(["--hops", str(args.hops), "--neighbourhood", args.neighbourhood])
     if args.java_text:
         argv.append("--java-text")
+    if args.summary:
+        argv.extend(["--summary", str(args.summary)])
     rc = _run(convert.main, argv)
     if rc:
         return rc
@@ -73,6 +75,8 @@ def cmd_convert(args: argparse.Namespace) -> int:
         feat_argv.extend(["--project", args.project_folder])
     if args.include_inactive:
         feat_argv.append("--include-inactive")
+    if args.summary:
+        feat_argv.extend(["--summary", str(args.summary)])
     return _run(features.main, feat_argv)
 
 
@@ -150,6 +154,12 @@ def main(argv: Optional[List[str]] = None) -> int:
         "--java-text",
         action="store_true",
         help="Read snippet text from JAVA_PROJECTS when the SGR has no sources",
+    )
+    p.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Success lines in this extract log, skipping projects that already have graph.json",
     )
     p.add_argument("--dry-run", action="store_true")
     sub = p.add_subparsers(dest="cmd", required=True)

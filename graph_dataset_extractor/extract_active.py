@@ -25,6 +25,7 @@ if str(CODE_DIR) not in sys.path:
 from paths import DEPICT_ROOT, GOLD_CSV, JAVA_PROJECTS, PROJECT_SGR_FILE, SGR_ROOT, ensure_sgr_on_path
 
 SUMMARY_LOG = DEPICT_ROOT / "logs" / "extract_sgr_summary.log"
+GRAPH_SUMMARY_LOG = DEPICT_ROOT / "logs" / "from_sgr_summary.log"
 
 
 def folder_name(project_name: str) -> str:

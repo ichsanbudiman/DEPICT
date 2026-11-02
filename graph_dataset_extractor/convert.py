@@ -118,6 +118,7 @@ def load_gold_groups(
     graph_dpd: Path,
     active_only: bool,
     project_filter: Optional[str],
+    allowed_names: Optional[set] = None,
 ) -> Dict[str, List[dict]]:
     """folder → list of unique {root_id, label, file_path, project_name, csv_lines, ...}."""
     by_folder: Dict[str, List[dict]] = defaultdict(list)
@@ -128,6 +129,8 @@ def load_gold_groups(
         for i, row in enumerate(reader, start=2):
             pn = row["project_name"]
             folder = folder_name(pn)
+            if allowed_names is not None and pn not in allowed_names:
+                continue
             if project_filter and folder != project_filter and pn != project_filter:
                 continue
             proj_dir = graph_dpd / folder
@@ -957,6 +960,12 @@ def main(argv: Optional[List[str]] = None) -> int:
         action="store_true",
         help="Read snippet text from JAVA_PROJECTS when metadata.yaml has no sources",
     )
+    p.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Success lines in this extract log, skipping any project that already has graph.json",
+    )
     args = p.parse_args(argv)
     active_only = not args.include_inactive
     if not args.gold.is_file():
@@ -969,23 +978,72 @@ def main(argv: Optional[List[str]] = None) -> int:
         f"neighbourhood={args.neighbourhood} hops={args.hops} "
         f"java_text={'on' if args.java_text else 'off'}"
     )
-    groups = load_gold_groups(args.gold, args.graph_dpd, active_only, args.project)
-    if not groups:
+    from extract_active import GRAPH_SUMMARY_LOG, SummaryLog, prior_successes
+
+    allowed_list = None
+    allowed = None
+    if args.summary is not None:
+        if not args.summary.is_file():
+            print(f"summary log missing: {args.summary}", file=sys.stderr)
+            return 1
+        allowed_list = prior_successes(args.summary)
+        allowed = set(allowed_list)
+        print(f"summary successes={len(allowed)} file={args.summary}")
+        if not allowed:
+            print(f"no success lines in {args.summary}", file=sys.stderr)
+            return 1
+    groups = load_gold_groups(
+        args.gold, args.graph_dpd, active_only, args.project, allowed
+    )
+    if not groups and not allowed_list:
         print("no gold rows matched Graph-DPD folders", file=sys.stderr)
         return 1
-    for folder, recs in sorted(groups.items()):
-        try:
-            convert_project(
-                folder,
-                recs,
-                args.graph_dpd,
-                args.out,
-                args.hops,
-                args.neighbourhood,
-                args.java_text,
-            )
-        except Exception as exc:
-            print(f"FAIL {folder}: {exc}", file=sys.stderr)
+    by_name = {recs[0]["project_name"]: (folder, recs) for folder, recs in groups.items() if recs}
+    if allowed_list is not None:
+        order = allowed_list
+    else:
+        order = [recs[0]["project_name"] for _, recs in sorted(groups.items())]
+    graph_log = SummaryLog(GRAPH_SUMMARY_LOG)
+    print(f"graph summary {graph_log.path}")
+    written = already = failed = waiting = 0
+    try:
+        for name in order:
+            found = by_name.get(name)
+            if found is None:
+                print(f"skip no sgr: {name}", file=sys.stderr)
+                graph_log.write(name, "pending", "no sgr")
+                waiting += 1
+                continue
+            folder, recs = found
+            if (args.out / folder / GRAPH_FILE).is_file():
+                print(f"skip graph exists: {name}")
+                graph_log.write(name, "success", "already present")
+                already += 1
+                continue
+            try:
+                convert_project(
+                    folder,
+                    recs,
+                    args.graph_dpd,
+                    args.out,
+                    args.hops,
+                    args.neighbourhood,
+                    args.java_text,
+                )
+            except Exception as exc:
+                reason = f"{type(exc).__name__}: {exc}"
+                print(f"FAIL {folder}: {reason}", file=sys.stderr)
+                graph_log.write(name, "Fail", reason)
+                failed += 1
+                continue
+            graph_log.write(name, "success")
+            written += 1
+    finally:
+        graph_log.close()
+    print(
+        f"graph summary written={written} already={already} "
+        f"pending={waiting} failed={failed}"
+    )
     return 0
 
 

@@ -371,12 +371,42 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--graph-dpd", "--sgr-root", dest="graph_dpd", type=Path, default=SGR_ROOT)
     p.add_argument("--project", default=None)
     p.add_argument("--include-inactive", action="store_true")
+    p.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Success lines in this extract log; skip a project whose features/index.csv is already written",
+    )
     args = p.parse_args(argv)
 
+    allowed_folders = None
+    if args.summary is not None:
+        from extract_active import folder_name, prior_successes
+
+        if not args.summary.is_file():
+            print(f"summary log missing: {args.summary}", file=sys.stderr)
+            return 1
+        names = prior_successes(args.summary)
+        allowed_folders = {folder_name(name) for name in names}
+        allowed_folders.update(names)
+
     by_folder: Dict[str, List[Tuple[Path, dict]]] = defaultdict(list)
+    features_done = 0
+    seen_done: Set[str] = set()
     for path, folder, inst in iter_instances(args.dataset, args.project):
+        if allowed_folders is not None and folder not in allowed_folders:
+            continue
+        if args.summary is not None and (path.parent / "features" / "index.csv").is_file():
+            if folder not in seen_done:
+                print(f"skip features exist: {folder}")
+                seen_done.add(folder)
+                features_done += 1
+            continue
         by_folder[folder].append((path, inst))
     if not by_folder:
+        if args.summary is not None or features_done:
+            print(f"features already present={features_done}")
+            return 0
         print(f"no {GRAPH_FILE}", file=sys.stderr)
         return 1
 

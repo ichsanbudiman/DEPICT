@@ -6,6 +6,7 @@ FOLDER="${3:-}"
 HOPS="${4:-1}"
 NEIGH="${5:-v2}"
 JAVA_TEXT="${6:-}"
+SUMMARY="${7:-}"
 export PYTHONPATH="${ROOT}/graph_dataset_extractor${PYTHONPATH:+:$PYTHONPATH}"
 ARGS=(--hops "$HOPS" --neighbourhood "$NEIGH")
 if [[ "$JAVA_TEXT" == "1" || "$JAVA_TEXT" == "on" ]]; then
@@ -20,7 +21,15 @@ fi
 if [[ -n "$FOLDER" ]]; then
   ARGS+=(--project-folder "$FOLDER")
 fi
+if [[ -n "$SUMMARY" ]]; then
+  ARGS+=(--summary "$SUMMARY")
+fi
 ARGS+=(convert)
-PY="${ROOT}/venv/bin/python"
-if [[ ! -x "$PY" ]]; then PY="python3"; fi
+if [[ -n "${DEPICT_VENV:-}" && -x "${DEPICT_VENV}/bin/python" ]]; then
+  PY="${DEPICT_VENV}/bin/python"
+elif [[ -x "${ROOT}/venv/bin/python" ]]; then
+  PY="${ROOT}/venv/bin/python"
+else
+  PY="python3"
+fi
 "$PY" "$ROOT/graph_dataset_extractor/pipeline.py" "${ARGS[@]}"
