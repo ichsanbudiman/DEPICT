@@ -128,6 +128,29 @@ def _one_line(text: str) -> str:
     return " ".join(str(text).split())
 
 
+def prior_successes(path: Path) -> List[str]:
+    """Project names already recorded as success in a summary log.
+
+    A stopped job leaves this file behind. Those projects are not extracted again.
+    """
+    if not path.is_file():
+        return []
+    names: List[str] = []
+    seen = set()
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for raw in text.splitlines():
+        line = raw.strip()
+        if ": " not in line:
+            continue
+        name, rest = line.split(": ", 1)
+        status = rest.split(" (", 1)[0].strip().lower()
+        if status != "success" or not name or name in seen:
+            continue
+        seen.add(name)
+        names.append(name)
+    return names
+
+
 class SummaryLog:
     """One line per project, flushed so a stopped job still leaves the file."""
 
@@ -155,8 +178,12 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--gold", type=Path, default=GOLD_CSV)
     p.add_argument("--summary", type=Path, default=SUMMARY_LOG)
     args = p.parse_args(argv)
+    done = prior_successes(args.summary)
     summary = SummaryLog(args.summary)
     print(f"summary {summary.path}")
+    print(f"resume successes={len(done)}")
+    for name in done:
+        summary.write(name, "success", "already extracted")
     try:
         if args.java_root is None or not args.java_root.is_dir():
             reason = f"JAVA_PROJECTS is not a directory: {args.java_root}"
@@ -173,6 +200,10 @@ def main(argv: Optional[List[str]] = None) -> int:
         extracted = missing = failed = skipped = 0
         for name, prefix in projects:
             out_dir = args.out / folder_name(name)
+            if name in done:
+                print(f"skip success: {name}")
+                skipped += 1
+                continue
             if (out_dir / PROJECT_SGR_FILE).is_file() and (out_dir / "metadata.yaml").is_file():
                 print(f"skip existing: {name} -> {out_dir}")
                 summary.write(name, "success", "already present")
