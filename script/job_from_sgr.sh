@@ -11,10 +11,79 @@
 set -uo pipefail
 export TERM=dumb
 rm -rf ~/.cache/lmod ~/.lmod.d/__cache__ 2>/dev/null || true
+
+# The depict-emerald venv was built with Python 3.11. Its python binary needs
+# libpython3.11.so.1.0, which is provided by the Python module, not by the venv.
+# Load that module before activating the venv. Python 3.10 does not supply it.
 module purge
+set +e
 module load bluebear
-module load bear-apps/2022a 2>/dev/null || true
-module load Python/3.10.4-GCCcore-11.3.0 2>/dev/null || true
+_BLUEBEAR_RC=$?
+set -e
+
+_enable_bear_apps_mpath() {
+  local ver="$1"
+  local p
+  for p in \
+    "/rds/bear-apps/${ver}/modules/all" \
+    "/rds/bear-apps/${ver}/el8/modules/all" \
+    "/rds/bear-apps/${ver}/live/modules/all"
+  do
+    if [ -d "$p" ]; then
+      module use "$p"
+      return 0
+    fi
+  done
+  return 1
+}
+
+if [ "${_BLUEBEAR_RC}" -ne 0 ]; then
+  _enable_bear_apps_mpath "2023a" || true
+fi
+
+BEAR_LOADED=""
+for ver in 2023a 2023b 2024a 2022b 2022a; do
+  set +e
+  module load "bear-apps/${ver}"
+  _BRC=$?
+  set -e
+  if [ "${_BRC}" -ne 0 ] && _enable_bear_apps_mpath "$ver"; then
+    set +e
+    module load "bear-apps/${ver}"
+    _BRC=$?
+    set -e
+  fi
+  if [ "${_BRC}" -eq 0 ]; then
+    BEAR_LOADED="${ver}"
+    break
+  fi
+done
+if [ -z "${BEAR_LOADED}" ]; then
+  echo "ERROR: could not load bear-apps" >&2
+  exit 1
+fi
+
+PYTHON_LOADED=""
+for cand in \
+  "Python/3.11.3-GCCcore-12.3.0" \
+  "Python/3.10.8-GCCcore-12.2.0" \
+  "Python/3.10.4-GCCcore-11.3.0"
+do
+  set +e
+  module load "${cand}"
+  _PRC=$?
+  set -e
+  if [ "${_PRC}" -eq 0 ] && command -v python3 >/dev/null 2>&1; then
+    PYTHON_LOADED="${cand}"
+    break
+  fi
+done
+if [ -z "${PYTHON_LOADED}" ]; then
+  echo "ERROR: could not load a Python module under bear-apps/${BEAR_LOADED}" >&2
+  exit 1
+fi
+echo "Python module: ${PYTHON_LOADED}"
+set +e
 
 PROJECT_DIR="${SLURM_SUBMIT_DIR:-$(pwd)}"
 cd "$PROJECT_DIR" || {
