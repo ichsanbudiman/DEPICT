@@ -101,11 +101,24 @@ JAVA_TEXT=0
 SUMMARY="${PROJECT_DIR}/logs/extract_sgr_summary.log"
 _BB_CPU_TAG="${BB_CPU:-generic}"
 export DEPICT_VENV="${DEPICT_VENV:-/rds/projects/m/minkull-spdisc-ichsan/ichsan/venvs/depict-${_BB_CPU_TAG}}"
-if [[ -x "${DEPICT_VENV}/bin/python" ]]; then
-  # shellcheck disable=SC1091
-  source "${DEPICT_VENV}/bin/activate"
-  export PATH="${DEPICT_VENV}/bin:${PATH}"
+if [[ ! -x "${DEPICT_VENV}/bin/python" ]]; then
+  echo "ERROR: missing venv python: ${DEPICT_VENV}/bin/python" >&2
+  echo "ERROR: run script/job_extract_sgr.sh once so it creates this venv" >&2
+  exit 1
 fi
+# shellcheck disable=SC1091
+source "${DEPICT_VENV}/bin/activate"
+export PATH="${DEPICT_VENV}/bin:${PATH}"
+unset PYTHONHOME PYTHONUSERBASE || true
+export PIP_USER=0
+# The Python module may set PYTHONPATH to its own prefix. Drop that so the
+# venv site-packages (where pip installed PyYAML) stay visible.
+unset PYTHONPATH || true
+if ! "${DEPICT_VENV}/bin/python" -c "import yaml" >/dev/null 2>&1; then
+  echo "PyYAML missing from ${DEPICT_VENV}; installing requirements.txt"
+  "${DEPICT_VENV}/bin/python" -m pip install -r "${PROJECT_DIR}/requirements.txt" || exit 1
+fi
+"${DEPICT_VENV}/bin/python" -c "import yaml; print('deps ok: yaml', yaml.__file__)" || exit 1
 echo "Job ID:        ${SLURM_JOB_ID:-local}"
 echo "Node:          ${SLURM_NODELIST:-local}"
 echo "Date:          $(date)"
