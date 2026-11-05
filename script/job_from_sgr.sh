@@ -12,9 +12,6 @@ set -uo pipefail
 export TERM=dumb
 rm -rf ~/.cache/lmod ~/.lmod.d/__cache__ 2>/dev/null || true
 
-# The depict-emerald venv was built with Python 3.11. Its python binary needs
-# libpython3.11.so.1.0, which is provided by the Python module, not by the venv.
-# Load that module before activating the venv. Python 3.10 does not supply it.
 module purge
 set +e
 module load bluebear
@@ -101,23 +98,60 @@ JAVA_TEXT=0
 SUMMARY="${PROJECT_DIR}/logs/extract_sgr_summary.log"
 _BB_CPU_TAG="${BB_CPU:-generic}"
 export DEPICT_VENV="${DEPICT_VENV:-/rds/projects/m/minkull-spdisc-ichsan/ichsan/venvs/depict-${_BB_CPU_TAG}}"
-if [[ ! -x "${DEPICT_VENV}/bin/python" ]]; then
-  echo "ERROR: missing venv python: ${DEPICT_VENV}/bin/python" >&2
-  echo "ERROR: run script/job_extract_sgr.sh once so it creates this venv" >&2
+export PIP_CACHE_DIR="${PIP_CACHE_DIR:-/scratch/${USER:-u}/pip}"
+export TMPDIR="${TMPDIR:-/tmp/${USER:-u}_depict_${SLURM_JOB_ID:-$$}}"
+mkdir -p "$PIP_CACHE_DIR" "$TMPDIR" "$(dirname "$DEPICT_VENV")"
+echo "Venv:          ${DEPICT_VENV}  (BB_CPU=${_BB_CPU_TAG})"
+
+MODULE_PY="$(command -v python3)"
+MODULE_PY_VER="$("$MODULE_PY" -c 'import sys; print("%d.%d" % sys.version_info[:2])')"
+_VENV_LOCK="${DEPICT_VENV}.setup.lock"
+PIP_LOG="${TMPDIR}/pip_install_depict.log"
+(
+  flock -w 1800 9 || {
+    echo "ERROR: timed out waiting for venv lock: $_VENV_LOCK" >&2
+    exit 1
+  }
+
+  _recreate_venv() {
+    echo "Creating venv at $DEPICT_VENV"
+    rm -rf "$DEPICT_VENV"
+    "$MODULE_PY" -m venv --system-site-packages "$DEPICT_VENV"
+    "${DEPICT_VENV}/bin/python" -m ensurepip --upgrade >/dev/null 2>&1 || true
+  }
+
+  _VENV_PY_VER="none"
+  if [[ -x "${DEPICT_VENV}/bin/python" ]]; then
+    _VENV_PY_VER="$("${DEPICT_VENV}/bin/python" -c 'import sys; print("%d.%d" % sys.version_info[:2])' 2>/dev/null || echo 0.0)"
+  fi
+  if [[ ! -x "${DEPICT_VENV}/bin/python" || "$_VENV_PY_VER" != "$MODULE_PY_VER" ]]; then
+    _recreate_venv
+  fi
+
+  # shellcheck disable=SC1091
+  source "${DEPICT_VENV}/bin/activate"
+  export PATH="${DEPICT_VENV}/bin:${PATH}"
+  unset PYTHONHOME PYTHONUSERBASE PYTHONPATH || true
+  export PIP_USER=0
+
+  if ! "${DEPICT_VENV}/bin/python" -c "import yaml" >/dev/null 2>&1; then
+    echo "PyYAML missing from ${DEPICT_VENV}; installing requirements.txt"
+    "${DEPICT_VENV}/bin/python" -m pip install -r "${PROJECT_DIR}/requirements.txt" >"$PIP_LOG" 2>&1 || {
+      echo "ERROR: pip install failed. Last 60 lines:" >&2
+      tail -60 "$PIP_LOG" >&2 || true
+      exit 1
+    }
+  fi
+) 9>"$_VENV_LOCK"
+if [[ $? -ne 0 ]]; then
   exit 1
 fi
+
 # shellcheck disable=SC1091
 source "${DEPICT_VENV}/bin/activate"
 export PATH="${DEPICT_VENV}/bin:${PATH}"
-unset PYTHONHOME PYTHONUSERBASE || true
+unset PYTHONHOME PYTHONUSERBASE PYTHONPATH || true
 export PIP_USER=0
-# The Python module may set PYTHONPATH to its own prefix. Drop that so the
-# venv site-packages (where pip installed PyYAML) stay visible.
-unset PYTHONPATH || true
-if ! "${DEPICT_VENV}/bin/python" -c "import yaml" >/dev/null 2>&1; then
-  echo "PyYAML missing from ${DEPICT_VENV}; installing requirements.txt"
-  "${DEPICT_VENV}/bin/python" -m pip install -r "${PROJECT_DIR}/requirements.txt" || exit 1
-fi
 "${DEPICT_VENV}/bin/python" -c "import yaml; print('deps ok: yaml', yaml.__file__)" || exit 1
 echo "Job ID:        ${SLURM_JOB_ID:-local}"
 echo "Node:          ${SLURM_NODELIST:-local}"
